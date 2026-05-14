@@ -1,0 +1,442 @@
+{
+  "_meta": {
+    "version": "2.0",
+    "fecha": "2026-05-13",
+    "nota": "9 inmuebles IFYR + 13 zonas BC. Numeración oficial del proyecto BC (Z1=Hanga Piko, Z2=Koreha Viri Viri Ngao, …). Z5 Hanga Nui excluida del sitio hasta validación en terreno.",
+    "total_puntos": 22,
+    "ifyr": 9,
+    "bc": 13
+  },
+  "puntos": [
+    {
+      "id": "IFYR-007",
+      "proyecto": "ifyr",
+      "nombre": "Radio Estación Naval",
+      "lat": -27.155946,
+      "lon": -109.433138,
+      "tipo": "fiscal",
+      "url_externa": "https://fiscales-religiosos.tepuku.org/inmuebles/IFYR-007"
+    },
+    {
+      "id": "IFYR-009",
+      "proyecto": "ifyr",
+      "nombre": "Casa Mecánico Radio",
+      "lat": -27.152623,
+      "lon": -109.432194,
+      "tipo": "fiscal",
+      "url_externa": "https://fiscales-religiosos.tepuku.org/inmuebles/IFYR-009"
+    },
+    {
+      "id": "IFYR-010",
+      "proyecto": "ifyr",
+      "nombre": "Jefatura Militar",
+      "lat": -27.149035,
+      "lon": -109.430653,
+      "tipo": "fiscal",
+      "url_externa": "https://fiscales-religiosos.tepuku.org/inmuebles/IFYR-010"
+    },
+    {
+      "id": "IFYR-018",
+      "proyecto": "ifyr",
+      "nombre": "Casa Practicante",
+      "lat": -27.148146,
+      "lon": -109.427722,
+      "tipo": "fiscal",
+      "url_externa": "https://fiscales-religiosos.tepuku.org/inmuebles/IFYR-018"
+    },
+    {
+      "id": "IFYR-020",
+      "proyecto": "ifyr",
+      "nombre": "Hospital Naval",
+      "lat": -27.147236,
+      "lon": -109.427037,
+      "tipo": "fiscal",
+      "url_externa": "https://fiscales-religiosos.tepuku.org/inmuebles/IFYR-020"
+    },
+    {
+      "id": "IFYR-021",
+      "proyecto": "ifyr",
+      "nombre": "Escuela pública N° 72",
+      "lat": -27.148035,
+      "lon": -109.426803,
+      "tipo": "fiscal",
+      "url_externa": "https://fiscales-religiosos.tepuku.org/inmuebles/IFYR-021"
+    },
+    {
+      "id": "IFYR-022",
+      "proyecto": "ifyr",
+      "nombre": "Casa monjas de la Escuela",
+      "lat": -27.147422,
+      "lon": -109.426588,
+      "tipo": "religioso",
+      "url_externa": "https://fiscales-religiosos.tepuku.org/inmuebles/IFYR-022"
+    },
+    {
+      "id": "IFYR-024",
+      "proyecto": "ifyr",
+      "nombre": "Iglesia Católica",
+      "lat": -27.149083,
+      "lon": -109.424204,
+      "tipo": "religioso",
+      "url_externa": "https://fiscales-religiosos.tepuku.org/inmuebles/IFYR-024"
+    },
+    {
+      "id": "IFYR-201",
+      "proyecto": "ifyr",
+      "nombre": "Leprosario",
+      "lat": -27.122966,
+      "lon": -109.415272,
+      "tipo": "fiscal",
+      "url_externa": "https://fiscales-religiosos.tepuku.org/inmuebles/IFYR-201"
+    },
+    {
+      "id": "BC-Z1",
+      "proyecto": "bc",
+      "nombre": "Hanga Piko",
+      "lat": -27.154918,
+      "lon": -109.438005,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "Haŋa Piko",
+        "denominacion_historica": "Hanga Piko",
+        "sectores_asociados": [
+          "Hanga Piko"
+        ],
+        "inmuebles_documentados": 23,
+        "tipos_patrimonio": [
+          "Bodega"
+        ],
+        "categoria": "registrado",
+        "evidencia": "material",
+        "estado_conservacion": "Bueno",
+        "grado_alteracion": "Muy modificado",
+        "tipo_propiedad": "Fiscal",
+        "tipo_tenencia": "Administrado por SASIPA Spa.",
+        "destino_original": "Bodegas",
+        "url_ficha_pdf": "/fichas/BC/ZCH01_BC.pdf",
+        "foto_principal": "/img/bc/bc-z1.jpg",
+        "foto_credito": "Archivo Fotográfico Museo Antropológico Padre Sebastián Englert",
+        "descripcion": "Haŋa Piko fue esencial en la infraestructura de comercio y explotación ganadera en la isla durante el periodo de la Compañía Explotadora. El conjunto incluye estanques de acumulación de agua, bodegas, una grasería y una estructura que originalmente fue un estanque de agua pero que fue modificada para convertirse en una bodega de combustibles. Estas estructuras fueron clave en las operaciones industriales de la isla."
+      }
+    },
+    {
+      "id": "BC-Z2",
+      "proyecto": "bc",
+      "nombre": "Koreha Viri Viri Ngao",
+      "lat": -27.168178,
+      "lon": -109.387784,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "Koreha Viri Viri Ŋao",
+        "denominacion_historica": "Vinapu",
+        "sectores_asociados": [
+          "Vinapu"
+        ],
+        "inmuebles_documentados": 7,
+        "tipos_patrimonio": [
+          "Puna",
+          "Bebedero"
+        ],
+        "categoria": "registrado",
+        "evidencia": "material",
+        "estado_conservacion": null,
+        "grado_alteracion": null,
+        "tipo_propiedad": "Fiscal",
+        "tipo_tenencia": "Administrado",
+        "destino_original": "Sistema de almacenamiento de agua",
+        "url_ficha_pdf": "/fichas/BC/ZCH02_BC.pdf",
+        "foto_principal": "/img/bc/bc-z2.jpg",
+        "foto_credito": "Archivo Fotográfico Museo Antropológico Padre Sebastián Englert",
+        "descripcion": "El conjunto es un sistema integrado de infraestructura hídrica compuesto por un estanque de agua, dos abrevaderos y otras estructuras asociadas que ya no existen (molino de viento, cañerías y pozo)."
+      }
+    },
+    {
+      "id": "BC-Z3",
+      "proyecto": "bc",
+      "nombre": "Hanga Te'e (Vaihu)",
+      "lat": -27.165226,
+      "lon": -109.364344,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "Haŋa Te'e",
+        "denominacion_historica": "Vaihu",
+        "sectores_asociados": [
+          "Vaihu"
+        ],
+        "inmuebles_documentados": 10,
+        "tipos_patrimonio": [
+          "Puna",
+          "Bebedero"
+        ],
+        "categoria": "registrado",
+        "evidencia": "material",
+        "estado_conservacion": null,
+        "grado_alteracion": null,
+        "foto_principal": "/img/bc/bc-z3.jpg",
+        "foto_credito": "Archivo Fotográfico Museo Antropológico Padre Sebastián Englert",
+        "descripcion": "Descripción del conjunto en preparación."
+      }
+    },
+    {
+      "id": "BC-Z4",
+      "proyecto": "bc",
+      "nombre": "Akahanga",
+      "lat": -27.14914,
+      "lon": -109.340473,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "'Aka Haŋa",
+        "denominacion_historica": "Akahanga",
+        "sectores_asociados": [
+          "Akahanga"
+        ],
+        "inmuebles_documentados": 9,
+        "tipos_patrimonio": [
+          "Puna",
+          "Bebedero",
+          "Pu Vai"
+        ],
+        "categoria": "ruinas",
+        "evidencia": "material",
+        "estado_conservacion": null,
+        "grado_alteracion": null,
+        "foto_principal": "/img/bc/bc-z4.jpg",
+        "foto_credito": "Archivo Fotográfico Museo Antropológico Padre Sebastián Englert",
+        "descripcion": "Descripción del conjunto en preparación."
+      }
+    },
+    {
+      "id": "BC-Z6",
+      "proyecto": "bc",
+      "nombre": "Hanga Ho'onu (La Perousse)",
+      "lat": -27.090142,
+      "lon": -109.300975,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "Haŋa Hō'onu",
+        "denominacion_historica": "La Perousse",
+        "sectores_asociados": [
+          "La Perousse (Hanga Ho'onu)"
+        ],
+        "inmuebles_documentados": 3,
+        "tipos_patrimonio": [
+          "Otros"
+        ],
+        "categoria": "ruinas",
+        "evidencia": "material",
+        "estado_conservacion": null,
+        "grado_alteracion": null,
+        "descripcion": "Descripción del conjunto en preparación."
+      }
+    },
+    {
+      "id": "BC-Z7",
+      "proyecto": "bc",
+      "nombre": "Mauku Roa",
+      "lat": -27.089749,
+      "lon": -109.284906,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "Mauku Roa",
+        "denominacion_historica": "Mauku Roa",
+        "sectores_asociados": [
+          "Mauku Roa"
+        ],
+        "inmuebles_documentados": 7,
+        "tipos_patrimonio": [
+          "Puna",
+          "Bebedero",
+          "Pu Vai"
+        ],
+        "categoria": "registrado",
+        "evidencia": "material",
+        "estado_conservacion": "Regular",
+        "grado_alteracion": "Poco modificado",
+        "tipo_propiedad": "Fiscal",
+        "tipo_tenencia": "Administrado",
+        "destino_original": "Sistema de almacenamiento de agua",
+        "url_ficha_pdf": "/fichas/BC/ZCH07_BC.pdf",
+        "descripcion": "El conjunto de Mauku Roa es un sistema hidráulico diseñado para la recolección, almacenamiento y distribución de agua a través de un molino de viento, un pozo, tuberías, un estanque y dos abrevaderos. Aunque el sistema ha sido en su mayoría desactivado, aún se mantiene en uso ocasional. Estanque (ID 7.4) Descripción Original: Estanque de piedra y cemento de 4.98 metros de largo, 5.49 metros de ancho y 2.22 metros de alto."
+      }
+    },
+    {
+      "id": "BC-Z8",
+      "proyecto": "bc",
+      "nombre": "Peka Peka (Ovahe)",
+      "lat": -27.078136,
+      "lon": -109.311361,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "Peka Peka",
+        "denominacion_historica": "Ovahe",
+        "sectores_asociados": [
+          "Ovahe (Peka Peka)"
+        ],
+        "inmuebles_documentados": 10,
+        "tipos_patrimonio": [
+          "Puna",
+          "Bebedero",
+          "Pu Vai"
+        ],
+        "categoria": "registrado",
+        "evidencia": "material",
+        "estado_conservacion": null,
+        "grado_alteracion": null,
+        "tipo_propiedad": "Fiscal",
+        "tipo_tenencia": "Administrado",
+        "destino_original": "Sistema de almacenamiento de agua",
+        "url_ficha_pdf": "/fichas/BC/ZCH08_BC.pdf",
+        "foto_principal": "/img/bc/bc-z8.jpg",
+        "foto_credito": "Archivo Fotográfico Museo Antropológico Padre Sebastián Englert",
+        "descripcion": "El conjunto de Peka Peka es parte de un sistema hidráulico, compuesto por un estanque, abrevaderos y un pozo, que fueron construidos entre 1900 y 1920. El sistema fue utilizado para almacenar y distribuir agua tanto para las actividades de la comunidad como para el ganado. Estanque (ID 8.4) Descripción: Estanque de piedra y cemento de 4.81 metros de largo, 4.81 metros de ancho y 2.0 metros de alto. Este estanque almacenaba agua proveniente de un molino y surtía a los abrevaderos anexos."
+      }
+    },
+    {
+      "id": "BC-Z9",
+      "proyecto": "bc",
+      "nombre": "Hanga 'Oteo",
+      "lat": -27.058937,
+      "lon": -109.365516,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "Haŋa 'Ōteo",
+        "denominacion_historica": "Hanga Oteo",
+        "sectores_asociados": [
+          "Hanga Oteo"
+        ],
+        "inmuebles_documentados": 10,
+        "tipos_patrimonio": [
+          "Puna",
+          "Bebedero"
+        ],
+        "categoria": "registrado",
+        "evidencia": "material",
+        "estado_conservacion": "Bueno",
+        "grado_alteracion": "Sin modificación",
+        "tipo_propiedad": "Fiscal",
+        "tipo_tenencia": "Administrado por Comunidad Indígena Ma'u Henua",
+        "destino_original": "Sistema de almacenamiento de agua",
+        "url_ficha_pdf": "/fichas/BC/ZCH09_BC.pdf",
+        "foto_principal": "/img/bc/bc-z9.jpg",
+        "foto_credito": "Archivo Fotográfico Museo Antropológico Padre Sebastián Englert",
+        "descripcion": "El conjunto de Haŋa 'Ōteo es un sistema hidráulico compuesto por un estanque, dos abrevaderos y un pozo. Estos elementos fueron utilizados en su origen para el almacenamiento y distribución del agua. Sin embargo, los registros antiguos no coinciden completamente con las características y ubicación actuales de algunos de estos elementos, particularmente los abrevaderos, lo que podría sugerir modificaciones posteriores o un error en los registros originales."
+      }
+    },
+    {
+      "id": "BC-Z10",
+      "proyecto": "bc",
+      "nombre": "Hanga Roa",
+      "lat": -27.148234,
+      "lon": -109.431196,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "Haŋa Roa",
+        "denominacion_historica": "Hanga Roa",
+        "sectores_asociados": [
+          "Hanga Roa"
+        ],
+        "inmuebles_documentados": 4,
+        "tipos_patrimonio": [],
+        "categoria": "documental",
+        "evidencia": "documental",
+        "estado_conservacion": null,
+        "grado_alteracion": null,
+        "foto_principal": "/img/bc/bc-z10.jpg",
+        "foto_credito": "Archivo Fotográfico Museo Antropológico Padre Sebastián Englert",
+        "descripcion": "Descripción del conjunto en preparación."
+      }
+    },
+    {
+      "id": "BC-Z11",
+      "proyecto": "bc",
+      "nombre": "Tahai",
+      "lat": -27.139638,
+      "lon": -109.426887,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "Tahai",
+        "denominacion_historica": "Tahai",
+        "sectores_asociados": [
+          "Tahai"
+        ],
+        "inmuebles_documentados": 7,
+        "tipos_patrimonio": [],
+        "categoria": "documental",
+        "evidencia": "documental",
+        "estado_conservacion": null,
+        "grado_alteracion": null,
+        "foto_principal": "/img/bc/bc-z11.jpg",
+        "foto_credito": "Archivo Fotográfico Museo Antropológico Padre Sebastián Englert",
+        "descripcion": "Descripción del conjunto en preparación."
+      }
+    },
+    {
+      "id": "BC-Z12",
+      "proyecto": "bc",
+      "nombre": "Hanga Kao Kao",
+      "lat": -27.134242,
+      "lon": -109.427033,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "Haŋa Kao Kao",
+        "denominacion_historica": "Hanga Kao Kao",
+        "sectores_asociados": [
+          "Hanga Kao Kao"
+        ],
+        "inmuebles_documentados": 6,
+        "tipos_patrimonio": [],
+        "categoria": "documental",
+        "evidencia": "documental",
+        "estado_conservacion": null,
+        "grado_alteracion": null,
+        "descripcion": "Descripción del conjunto en preparación."
+      }
+    },
+    {
+      "id": "BC-Z13",
+      "proyecto": "bc",
+      "nombre": "Hanga Tetenga",
+      "lat": -27.137638,
+      "lon": -109.312949,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "Haŋa Tē-teŋa 'a Ure Ŋoro-ŋoro",
+        "denominacion_historica": "Hanga Tetenga",
+        "sectores_asociados": [
+          "Hanga Tetenga"
+        ],
+        "inmuebles_documentados": 9,
+        "tipos_patrimonio": [],
+        "categoria": "documental",
+        "evidencia": "documental",
+        "estado_conservacion": null,
+        "grado_alteracion": null,
+        "foto_principal": "/img/bc/bc-z13.jpg",
+        "foto_credito": "Archivo Fotográfico Museo Antropológico Padre Sebastián Englert",
+        "descripcion": "Descripción del conjunto en preparación."
+      }
+    },
+    {
+      "id": "BC-Z14",
+      "proyecto": "bc",
+      "nombre": "Mataveri",
+      "lat": -27.164201,
+      "lon": -109.440832,
+      "tipo": "borde-costero",
+      "ficha": {
+        "denominacion_rapanui": "Mataveri",
+        "denominacion_historica": "Mataveri",
+        "sectores_asociados": [
+          "Mataveri"
+        ],
+        "inmuebles_documentados": 8,
+        "tipos_patrimonio": [],
+        "categoria": "documental",
+        "evidencia": "documental",
+        "estado_conservacion": null,
+        "grado_alteracion": null,
+        "descripcion": "Descripción del conjunto en preparación."
+      }
+    }
+  ]
+}

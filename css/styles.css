@@ -1,0 +1,1740 @@
+/* ============================================
+   Sistema Tepuku v1.0 - Inmuebles sXX
+   ============================================ */
+
+:root {
+  /* Triada de marca */
+  --tepuku-azul: #35558A;
+  --ifyr-granate: #8B1A1A;
+  --bc-terracota: #A85838;
+
+  /* Color de mapa BC (variante específica del contexto cartográfico) */
+  --bc-mapa: #7A8F4E;
+
+  /* Neutros */
+  --crema: #f5ead8;
+  --crema-claro: #fdf6e3;
+  --papel: #faf4e6;
+  --tinta: #2a2419;
+  --tinta-suave: #5a4f3f;
+  --linea: #d9c9a8;
+  --linea-suave: #ebdcc3;
+
+  /* Tipografía */
+  --display: 'Oswald', 'Helvetica Neue', sans-serif;
+  --serif: 'Source Serif 4', 'Georgia', serif;
+
+  /* Layout */
+  --max-width: 1280px;
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --paraguas-altura: 40px;
+  --menu-altura: 72px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--tinta);
+  background: var(--crema);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Tipografía
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  color: var(--tinta);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 400;
+}
+
+.tepuku-tagline {
+  font-family: var(--display);
+  font-size: clamp(0.95rem, 1.4vw, 1.125rem);
+  letter-spacing: 0.08em;
+  color: var(--tepuku-azul);
+  margin: -0.25rem 0 1.5rem 0;
+  text-transform: none;
+  font-weight: 400;
+  max-width: none;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 1rem;
+  max-width: 65ch;
+}
+
+a {
+  color: var(--ifyr-granate);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--ifyr-granate);
+}
+
+.eyebrow {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: var(--tinta-suave);
+}
+
+/* ============================================
+   Barra paraguas Tepuku
+   ============================================ */
+
+.paraguas {
+  background: var(--tepuku-azul);
+  color: var(--crema);
+  height: var(--paraguas-altura);
+  display: flex;
+  align-items: center;
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.paraguas-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.paraguas-marca {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  opacity: 0.95;
+  transition: opacity 0.2s;
+}
+
+.paraguas-marca:hover {
+  opacity: 1;
+}
+
+.paraguas-marca img {
+  height: 24px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  /* Logo español es azul oscuro; aclararlo sobre paraguas oscuro */
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+}
+
+.paraguas-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.paraguas-links a {
+  color: var(--crema);
+  border-bottom: none;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.paraguas-links a:hover {
+  opacity: 1;
+}
+
+/* ============================================
+   Menú principal
+   ============================================ */
+
+.menu {
+  position: sticky;
+  top: 0;
+  background: var(--crema);
+  border-bottom: 1px solid var(--linea-suave);
+  height: var(--menu-altura);
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.menu-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-logo {
+  font-family: var(--display);
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tinta);
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: opacity 0.2s ease;
+}
+
+.menu-logo:hover {
+  opacity: 0.75;
+}
+
+.menu-logo span {
+  color: var(--tepuku-azul);
+  margin-left: 0.4rem;
+  font-weight: 400;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.menu-nav a {
+  font-family: var(--display);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tinta);
+  border-bottom: none;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.menu-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--tepuku-azul);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.menu-nav a:hover::after,
+.menu-nav a.activo::after {
+  transform: scaleX(1);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-family: var(--display);
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--tinta);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================
+   Footer Tepuku
+   ============================================ */
+
+.footer {
+  background: var(--tepuku-azul);
+  color: var(--crema);
+  padding: 4rem 0 2rem;
+  margin-top: 6rem;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer h4 {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--crema);
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.footer p, .footer a {
+  color: var(--crema);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.footer a {
+  border-bottom: none;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.footer a:hover {
+  opacity: 1;
+}
+
+.footer-marca {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+  color: var(--crema);
+  display: inline-block;
+}
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+  display: block;
+  margin-bottom: 1.5rem;
+  max-width: 320px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.88;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(245, 234, 216, 0.15);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  opacity: 0.7;
+}
+
+/* ============================================
+   Layout helpers
+   ============================================ */
+
+.contenido {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.seccion {
+  padding: 5rem 0;
+}
+
+.seccion-compacta {
+  padding: 3rem 0;
+}
+
+/* ============================================
+   Hero
+   ============================================ */
+
+.hero {
+  position: relative;
+  min-height: clamp(540px, 80vh, 760px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--crema);
+}
+
+.hero-imagen {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: sepia(0.45) contrast(0.92) brightness(1.02);
+}
+
+.hero-imagen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 234, 216, 0.0) 0%,
+    rgba(245, 234, 216, 0.35) 50%,
+    rgba(245, 234, 216, 0.95) 100%
+  );
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 5rem var(--gutter) 4rem;
+  width: 100%;
+}
+
+.hero h1 {
+  max-width: 18ch;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ifyr-granate);
+}
+
+.hero-periodo {
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1.75rem;
+  font-family: var(--display);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--tinta);
+  background: transparent;
+  color: var(--tinta);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border-bottom: 1px solid var(--tinta);
+}
+
+.btn:hover {
+  background: var(--tinta);
+  color: var(--crema);
+}
+
+.btn-primario {
+  background: var(--tepuku-azul);
+  border-color: var(--tepuku-azul);
+  color: var(--crema);
+}
+
+.btn-primario:hover {
+  background: var(--tinta);
+  border-color: var(--tinta);
+}
+
+.hero-credito {
+  position: absolute;
+  bottom: 1.5rem;
+  right: var(--gutter);
+  z-index: 2;
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  background: rgba(245, 234, 216, 0.85);
+  padding: 0.5rem 0.875rem;
+  backdrop-filter: blur(4px);
+}
+
+.hero-credito strong {
+  font-weight: 500;
+}
+
+.hero-credito-aviso {
+  display: block;
+  font-size: 0.625rem;
+  margin-top: 0.125rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================
+   Stats
+   ============================================ */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  padding: 4rem 0;
+  border-top: 1px solid var(--linea);
+  border-bottom: 1px solid var(--linea);
+}
+
+.stats > div {
+  text-align: center;
+  padding: 0 2rem;
+  border-right: 1px solid var(--linea-suave);
+}
+
+.stats > div:last-child {
+  border-right: none;
+}
+
+.stat-numero {
+  font-family: var(--display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--tepuku-azul);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+
+/* ============================================
+   Cards de proyectos
+   ============================================ */
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.proyecto-card {
+  background: var(--crema);
+  border: 1px solid var(--linea);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.proyecto-card-imagen {
+  width: calc(100% + 5rem);
+  margin: -2.5rem -2.5rem 1.75rem;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #d9c8a0;
+  position: relative;
+}
+
+.proyecto-card-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  filter: sepia(0.18) contrast(0.97);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* IFYR: plano antiguo con contenido principal centrado verticalmente,
+   pero el borde irregular del papel arriba y abajo. Encuadre que muestre
+   el dibujo descartando el borde rasgado. */
+.proyecto-card[data-proyecto="ifyr"] .proyecto-card-imagen img {
+  object-position: center 42%;
+  transform: scale(1.08);
+}
+
+.proyecto-card:hover .proyecto-card-imagen img {
+  transform: scale(1.06);
+  filter: sepia(0.08) contrast(1);
+}
+
+.proyecto-card[data-proyecto="ifyr"]:hover .proyecto-card-imagen img {
+  transform: scale(1.14);
+}
+
+.proyecto-card[data-proyecto="hom"] .proyecto-card-imagen img {
+  filter: sepia(0.35) contrast(0.95) grayscale(0.2);
+}
+
+.proyecto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px -30px rgba(42, 36, 25, 0.25);
+  border-color: var(--proyecto-color, var(--tepuku-azul));
+}
+
+.proyecto-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--proyecto-color, var(--tepuku-azul));
+}
+
+.proyecto-card[data-proyecto="ifyr"] {
+  --proyecto-color: var(--ifyr-granate);
+}
+
+.proyecto-card[data-proyecto="bc"] {
+  --proyecto-color: var(--bc-terracota);
+}
+
+.proyecto-card[data-proyecto="hom"] {
+  --proyecto-color: var(--tinta-suave);
+  opacity: 0.75;
+}
+
+.proyecto-codigo {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--proyecto-color);
+  margin-bottom: 0.75rem;
+}
+
+.proyecto-titulo {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: var(--tinta);
+}
+
+.proyecto-descripcion {
+  font-size: 0.9375rem;
+  color: var(--tinta-suave);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.proyecto-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--linea-suave);
+}
+
+.proyecto-meta-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8125rem;
+}
+
+.proyecto-meta-label {
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  margin-bottom: 0.125rem;
+}
+
+.proyecto-meta-valor {
+  font-family: var(--display);
+  font-weight: 500;
+  color: var(--tinta);
+}
+
+.proyecto-card-cta {
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--proyecto-color);
+  border-bottom: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.proyecto-card-cta::after {
+  content: '→';
+  transition: transform 0.2s;
+}
+
+.proyecto-card-cta:hover::after {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   Imágenes de cards en /proyectos/
+   ============================================ */
+
+.proyecto-imagen {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--linea);
+  background: var(--linea-suave);
+}
+
+/* Página /proyectos/ — grid simétrico para que las imágenes
+   de IFYR, BC y HOM se vean del mismo tamaño exacto */
+.proyecto-detalle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.proyecto-detalle-grid--invertido > :first-child {
+  order: 1;
+}
+
+.proyecto-detalle-grid--invertido > :last-child {
+  order: 2;
+}
+
+@media (max-width: 760px) {
+  .proyecto-detalle-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  /* En móvil, la imagen siempre primero independientemente del orden de DOM */
+  .proyecto-detalle-grid .proyecto-imagen {
+    order: -1;
+  }
+  .proyecto-detalle-grid--invertido > :first-child,
+  .proyecto-detalle-grid--invertido > :last-child {
+    order: initial;
+  }
+}
+
+.proyecto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: sepia(0.25) contrast(0.95);
+  transition: filter 0.3s ease, transform 0.6s ease;
+}
+
+.proyecto-imagen:hover img {
+  filter: sepia(0.1) contrast(1);
+  transform: scale(1.02);
+}
+
+.proyecto-imagen-pendiente img {
+  filter: sepia(0.5) contrast(0.85) brightness(0.95);
+  opacity: 0.75;
+}
+
+/* ============================================
+   Mapa síntesis (home)
+   ============================================ */
+
+.mapa-sintesis {
+  /* Aspect ratio aproximado de Rapa Nui (28 km × 19 km ≈ 1.45) para que
+     la isla ocupe la mayor parte del recuadro sin espacio sobrante. */
+  aspect-ratio: 3 / 2;
+  background: var(--crema-claro);
+  border: 1px solid var(--linea);
+  position: relative;
+  margin: 3rem 0;
+  box-shadow: 0 20px 50px -30px rgba(42, 36, 25, 0.25);
+  max-height: 700px;
+}
+
+.mapa-sintesis-leaflet {
+  width: 100%;
+  height: 100%;
+}
+
+/* Mapa-síntesis: tile cartográfico con sepia muy sutil para sintonizar con
+   la estética del archivo, sin perder legibilidad de etiquetas y relieve. */
+.mapa-sintesis--antiguo .leaflet-tile-pane {
+  filter: sepia(0.18) saturate(0.95) contrast(1.02);
+}
+
+.mapa-sintesis--antiguo {
+  background: var(--crema-claro);
+  border-color: var(--linea);
+}
+
+.mapa-sintesis--antiguo::before {
+  /* Vignette muy suave a las esquinas — apenas perceptible */
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 60px 5px rgba(101, 70, 35, 0.08);
+  z-index: 401;
+}
+
+/* Leaflet override */
+.leaflet-container {
+  background: var(--crema-claro) !important;
+  font-family: var(--serif) !important;
+}
+
+.leaflet-tile-pane {
+  filter: sepia(0.18) contrast(0.95) brightness(1.02);
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--crema-claro) !important;
+  border: 1px solid var(--ifyr-granate) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 10px 30px -10px rgba(42, 36, 25, 0.3) !important;
+  font-family: var(--serif) !important;
+}
+
+.leaflet-popup-tip {
+  background: var(--crema-claro) !important;
+  border: 1px solid var(--ifyr-granate) !important;
+}
+
+.popup-titulo {
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var(--tinta);
+}
+
+.popup-tipo {
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ifyr-granate);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Tooltip nativo de Leaflet (hover sobre marcador) */
+.leaflet-tooltip.leaflet-tooltip-top {
+  background: var(--crema-claro);
+  border: 1px solid var(--linea);
+  border-top: 3px solid var(--linea);
+  border-radius: 0;
+  padding: 0.55rem 0.9rem;
+  font-family: var(--serif);
+  box-shadow: 0 8px 22px -8px rgba(42, 36, 25, 0.4);
+  white-space: nowrap;
+}
+
+.leaflet-tooltip.tooltip-mapa--ifyr {
+  border-top-color: #8B1A1A;
+}
+
+.leaflet-tooltip.tooltip-mapa--bc {
+  border-top-color: #7A8F4E;
+}
+
+.leaflet-tooltip.leaflet-tooltip-top::before {
+  border-top-color: var(--linea);
+}
+
+.tooltip-mapa .tooltip-titulo {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--tinta);
+  letter-spacing: 0.01em;
+}
+
+/* ============================================
+   Página Mapa completa
+   ============================================ */
+
+.mapa-pagina {
+  height: calc(100vh - var(--paraguas-altura) - var(--menu-altura));
+  display: grid;
+  grid-template-columns: 320px 1fr;
+}
+
+.mapa-panel {
+  background: var(--papel);
+  border-right: 1px solid var(--linea);
+  overflow-y: auto;
+  padding: 2rem 1.5rem;
+}
+
+.mapa-filtros {
+  margin-bottom: 2rem;
+}
+
+.filtro-grupo {
+  margin-bottom: 1.5rem;
+}
+
+.filtro-titulo {
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  margin-bottom: 0.75rem;
+}
+
+.filtro-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filtro-check {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  cursor: pointer;
+  font-size: 0.9375rem;
+}
+
+.filtro-check input {
+  accent-color: var(--tepuku-azul);
+}
+
+.lista-puntos {
+  list-style: none;
+}
+
+.lista-puntos li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--linea-suave);
+  cursor: pointer;
+  transition: padding 0.2s;
+}
+
+.lista-puntos li:hover {
+  padding-left: 0.5rem;
+}
+
+.lista-puntos-titulo {
+  font-family: var(--display);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--tinta);
+}
+
+.lista-puntos-meta {
+  font-size: 0.8125rem;
+  color: var(--tinta-suave);
+}
+
+.mapa-leaflet {
+  width: 100%;
+  height: 100%;
+}
+
+/* Botón "Volver a vista general" — control de Leaflet en topleft, encima
+   del +/- de zoom. Estilo coherente con el resto de controles Leaflet. */
+.mapa-home-control {
+  width: 30px !important;
+  height: 30px !important;
+  background: var(--crema) !important;
+  color: var(--tinta) !important;
+  font-size: 18px !important;
+  line-height: 30px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  display: block !important;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.mapa-home-control:hover {
+  background: var(--tepuku-azul) !important;
+  color: var(--crema) !important;
+}
+
+/* Reglas antiguas conservadas para compatibilidad — sin uso actual */
+.mapa-home-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 34px;
+  height: 34px;
+  background: var(--crema);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  color: var(--tinta);
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--display);
+  line-height: 1;
+}
+
+.mapa-home-btn:hover {
+  background: var(--tepuku-azul);
+  color: var(--crema);
+  border-color: var(--tepuku-azul);
+}
+
+
+.mapa-pagina {
+  position: relative;
+}
+
+/* ============================================
+   Panel lateral derecho con detalle (IFYR + BC)
+   ============================================ */
+
+.panel-detalle {
+  --panel-color: var(--ifyr-granate);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: clamp(360px, 38vw, 520px);
+  height: 100vh;
+  background: var(--crema);
+  border-left: 1px solid var(--linea);
+  box-shadow: -20px 0 60px -20px rgba(42, 36, 25, 0.25);
+  overflow-y: auto;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: 0;
+}
+
+.panel-detalle.activo {
+  transform: translateX(0);
+}
+
+.panel-detalle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--panel-color);
+}
+
+.panel-cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--crema);
+  border: 1px solid var(--linea);
+  width: 36px;
+  height: 36px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--tinta);
+  line-height: 1;
+  z-index: 2;
+  transition: all 0.2s;
+}
+
+.panel-cerrar:hover {
+  background: var(--panel-color);
+  color: var(--crema);
+  border-color: var(--panel-color);
+}
+
+.panel-cabecera {
+  padding: 3rem 2rem 1.5rem;
+  border-bottom: 1px solid var(--linea-suave);
+}
+
+.panel-tipo {
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--panel-color);
+  margin-bottom: 0.75rem;
+}
+
+.panel-titulo {
+  font-family: var(--display);
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: var(--tinta);
+}
+
+.panel-coords {
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  color: var(--tinta-suave);
+  letter-spacing: 0.06em;
+}
+
+.panel-imagen-wrapper:not(:empty) {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--linea-suave);
+  position: relative;
+}
+
+.panel-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: sepia(0.15) contrast(0.97);
+}
+
+.panel-imagen-credito {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  font-family: var(--display);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(253, 246, 227, 0.92);
+  background: linear-gradient(to top,
+    rgba(42, 36, 25, 0.78) 0%,
+    rgba(42, 36, 25, 0.55) 60%,
+    rgba(42, 36, 25, 0) 100%);
+  text-align: right;
+  pointer-events: none;
+}
+
+.panel-cuerpo {
+  padding: 2rem;
+}
+
+.panel-cuerpo .lead {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--tinta-suave);
+  margin-bottom: 1.5rem;
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.panel-grid-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-grid-label {
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  margin-bottom: 0.375rem;
+}
+
+.panel-grid-valor {
+  font-family: var(--serif);
+  font-size: 0.9375rem;
+  color: var(--tinta);
+  line-height: 1.4;
+}
+
+.panel-cita {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  background: var(--papel);
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  color: var(--tinta-suave);
+  border-left: 3px solid var(--panel-color);
+  line-height: 1.5;
+}
+
+.panel-acciones {
+  padding: 0 2rem 2rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.panel-acciones .btn {
+  flex: 1;
+  min-width: 120px;
+  justify-content: center;
+}
+
+/* Enlaces a ficha PDF y sitio del proyecto */
+.panel-enlaces {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.panel-enlace {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.875rem 1.125rem;
+  background: var(--papel);
+  border: 1px solid var(--linea);
+  border-left: 3px solid var(--panel-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-family: var(--display);
+  font-size: 0.875rem;
+  color: var(--tinta);
+}
+
+.panel-enlace:hover {
+  background: var(--crema);
+  border-color: var(--panel-color);
+  border-left-width: 5px;
+  padding-left: 1rem;
+  transform: translateX(2px);
+}
+
+.panel-enlace-icono {
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.panel-enlace-label {
+  letter-spacing: 0.04em;
+}
+
+/* Placeholder cuando no hay foto disponible */
+.panel-imagen-wrapper:has(.panel-imagen-placeholder) {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.panel-imagen-placeholder {
+  width: 100%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(135deg,
+      var(--linea-suave) 0,
+      var(--linea-suave) 14px,
+      var(--papel) 14px,
+      var(--papel) 28px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--panel-color);
+  position: relative;
+}
+
+.panel-imagen-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 1.5rem;
+  border: 1px solid var(--panel-color);
+  opacity: 0.25;
+}
+
+.panel-imagen-placeholder-inicial {
+  font-family: var(--display);
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  z-index: 1;
+}
+
+.panel-imagen-placeholder-nota {
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  z-index: 1;
+}
+
+/* Descripción extendida (sólo IFYR por ahora) */
+.panel-descripcion {
+  font-family: var(--serif);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--tinta);
+  margin: 0;
+}
+
+/* Secciones con título en el panel */
+.panel-seccion {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--linea-suave);
+}
+
+.panel-seccion:first-of-type {
+  margin-top: 0.5rem;
+  padding-top: 0;
+  border-top: none;
+}
+
+.panel-seccion-titulo {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--panel-color);
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--panel-color);
+  display: inline-block;
+}
+
+.panel-seccion .panel-grid {
+  margin-top: 0;
+}
+
+/* Lista de composición (componentes IFYR / inmuebles BC)
+   Versión compacta colapsable: cabecera siempre visible en 1 línea,
+   detalle expandible con <details><summary>. */
+.panel-composicion {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: comp;
+}
+
+.panel-composicion-item {
+  position: relative;
+  border-bottom: 1px solid var(--linea-suave);
+  counter-increment: comp;
+}
+
+.panel-composicion-item:last-child {
+  border-bottom: none;
+}
+
+.panel-composicion-item::before {
+  content: counter(comp, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  font-family: var(--display);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--panel-color);
+  font-weight: 500;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Cabecera siempre visible: 1 línea con id · año · estado · nombre · ficha
+   El chevron queda absoluto a la derecha — nunca se envuelve. */
+.panel-composicion-cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  align-items: center;
+  padding: 0.625rem 1.75rem 0.625rem 2.5rem;
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease;
+  position: relative;
+}
+
+.panel-composicion-cabecera::-webkit-details-marker { display: none; }
+.panel-composicion-toggle > summary { list-style: none; }
+
+.panel-composicion-item--simple .panel-composicion-cabecera {
+  cursor: default;
+}
+
+.panel-composicion-toggle:hover .panel-composicion-cabecera {
+  background: var(--papel);
+}
+
+.panel-composicion-id {
+  color: var(--panel-color);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.panel-composicion-anio {
+  flex-shrink: 0;
+}
+
+.panel-composicion-estado {
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--linea);
+  border-radius: 999px;
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  color: var(--tinta-suave);
+  flex-shrink: 0;
+}
+
+.panel-composicion-nombre {
+  font-family: var(--serif);
+  font-size: 0.9375rem;
+  color: var(--tinta);
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.3;
+  flex: 1 1 auto;
+  min-width: 60%;
+}
+
+.panel-composicion-ficha {
+  font-family: var(--display);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--panel-color);
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--panel-color);
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.panel-composicion-ficha:hover {
+  background: var(--panel-color);
+  color: var(--crema);
+}
+
+/* Chevron absoluto a la derecha — siempre alineado al primer renglón */
+.panel-composicion-chevron {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.95rem;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid var(--tinta-suave);
+  border-bottom: 1.5px solid var(--tinta-suave);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.panel-composicion-toggle[open] .panel-composicion-chevron {
+  transform: rotate(-135deg);
+  top: 1.2rem;
+}
+
+/* Detalle expandible */
+.panel-composicion-detalle {
+  padding: 0 0 0.9rem 2.5rem;
+  animation: fadeInDetalle 0.2s ease;
+}
+
+@keyframes fadeInDetalle {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.panel-composicion-meta {
+  font-family: var(--serif);
+  font-size: 0.8125rem;
+  color: var(--tinta-suave);
+  line-height: 1.4;
+  font-style: italic;
+  margin: 0 0 0.5rem 0;
+}
+
+.panel-composicion-resumen {
+  font-family: var(--serif);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--tinta);
+  margin: 0.4rem 0 0 0;
+  max-width: none;
+}
+
+/* Chips de tipos de patrimonio (BC) */
+.panel-chips-wrapper {
+  margin-top: 1rem;
+}
+
+.panel-chips-label {
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  margin-bottom: 0.625rem;
+}
+
+.panel-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.panel-chips .chip {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  background: var(--papel);
+  border: 1px solid var(--panel-color);
+  color: var(--panel-color);
+  font-family: var(--display);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+}
+
+@media (max-width: 600px) {
+  .panel-detalle {
+    width: 100vw;
+  }
+
+  .panel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Equipo institucional
+   ============================================ */
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.equipo-bloque h2 {
+  color: var(--tepuku-azul);
+  margin-bottom: 1.5rem;
+}
+
+.equipo-bloque p + p {
+  margin-top: 1rem;
+}
+
+.equipo-cta-proyectos {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--linea);
+  font-family: var(--display);
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+}
+
+.equipo-cta-proyectos a {
+  font-weight: 500;
+  margin: 0 0.25rem;
+}
+
+.equipo-panel {
+  background: var(--papel);
+  padding: 2rem;
+  border-top: 3px solid var(--tepuku-azul);
+}
+
+.equipo-panel-item {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--linea-suave);
+}
+
+.equipo-panel-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.equipo-panel-label {
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.equipo-panel-valor {
+  font-family: var(--serif);
+  font-size: 0.9375rem;
+  color: var(--tinta);
+  line-height: 1.5;
+}
+
+/* ============================================
+   Acerca
+   ============================================ */
+
+.acerca-prosa {
+  max-width: 720px;
+}
+
+.acerca-prosa h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--tepuku-azul);
+}
+
+.acerca-prosa h2:first-child {
+  margin-top: 0;
+}
+
+.cita-bloque {
+  background: var(--papel);
+  padding: 1.5rem;
+  border-left: 3px solid var(--tepuku-azul);
+  margin: 1.5rem 0;
+  font-family: var(--display);
+  font-size: 0.875rem;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 900px) {
+  .menu-nav {
+    display: none;
+    position: absolute;
+    top: var(--menu-altura);
+    left: 0;
+    right: 0;
+    background: var(--crema);
+    flex-direction: column;
+    padding: 1.5rem var(--gutter);
+    border-bottom: 1px solid var(--linea);
+    gap: 1rem;
+  }
+
+  .menu-nav.abierto {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .equipo-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mapa-pagina {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .mapa-panel {
+    max-height: 40vh;
+    border-right: none;
+    border-bottom: 1px solid var(--linea);
+  }
+
+  .paraguas-links {
+    gap: 1rem;
+    font-size: 0.6875rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+}

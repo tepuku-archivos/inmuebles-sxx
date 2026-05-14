@@ -1,67 +1,36 @@
-# Inventario de inmuebles del siglo XX en Rapa Nui
+# Inventario sXX · Repositorio técnico
 
-Sitio público del Inventario sXX. Reúne proyectos de Tepuku sobre inmuebles construidos en Rapa Nui durante el siglo XX.
+> **Esta es la fuente técnica del sitio.**
+> Para acceder al inventario, ingresá al sitio público:
+>
+> ### → [inmuebles-sxx.tepuku.org](https://inmuebles-sxx.tepuku.org)
+>
+> Aquí solo viven los archivos HTML/CSS/JS que sirven al sitio. No es el destino para investigadores, prensa ni público general.
 
-URL pública: https://inmuebles.tepuku.org
+---
 
-## Estructura del repo
+## Sobre el sitio público
 
-```
-.
-├── index.html       Sitio completo (HTML + CSS + JS)
-├── CNAME            Dominio personalizado (no editar)
-├── .nojekyll        Configuración GitHub Pages (no editar)
-└── README.md        Este archivo
-```
+El **Inventario de Inmuebles del Siglo XX en Rapa Nui** es un repositorio público que reúne proyectos de investigación patrimonial sobre la arquitectura histórica de la isla durante 1900–1965. Está publicado por **Tepuku · Centro de Investigaciones Aplicadas en Rapa Nui y Otras Islas**.
 
-## Cómo editar contenido
+Acceso al sitio: **[inmuebles-sxx.tepuku.org](https://inmuebles-sxx.tepuku.org)**
 
-Todos los textos y datos están en `index.html`.
+## Proyectos integrados
 
-### Cambiar texto de una sección
+| Código | Proyecto | Año | Sitio del proyecto |
+|---|---|---|---|
+| IFYR | Inmuebles fiscales y religiosos de Hanga Roa | 2024 | [fiscales-religiosos.tepuku.org](https://fiscales-religiosos.tepuku.org) |
+| BC | Vestigios del periodo histórico en el borde costero | 2022 | [StoryMaps](https://storymaps.arcgis.com/stories/9f980fd024cd4f03a6fa28a7ae027804) |
+| HOM | Diagnóstico de la Hacienda Ovejera de Mataveri | 2020 | Integración pendiente |
 
-1. Abrir `index.html` en un editor (VS Code recomendado)
-2. Buscar el texto que querés cambiar (Ctrl+F)
-3. Modificar entre las etiquetas HTML (sin tocar las etiquetas mismas)
-4. Guardar
-5. Commit y push con GitHub Desktop
+## Contacto
 
-### Agregar un inmueble al mapa
-
-1. Abrir `index.html`
-2. Buscar el array `const inmuebles = [`
-3. Copiar una línea existente
-4. Pegar antes del corchete de cierre `];`
-5. Cambiar los valores: `id`, `nombre`, `año`, `lat`, `lng`, etc.
-6. Guardar y publicar
-
-Ejemplo:
-```javascript
-{id:'BC-001', nombre:'Bodega de Hanga Piko', proyecto:'BC', proyecto_label:'Borde Costero', año:'1900', sector:'Hanga Piko', lat:-27.156, lng:-109.443, color:'#BA7517', tipo:'Industrial', tenencia:'Compañía Explotadora', url:'https://storymaps.arcgis.com/stories/...', descripcion:'Texto descriptivo...'}
-```
-
-### Cambiar un hito de la línea de tiempo
-
-Buscar `<div class="hito">` en index.html. Cada hito tiene:
-- `<div class="hito-año">` para el año
-- `<h4>` para el título
-- `<p>` para el texto
-
-## Datos actuales
-
-- **9 inmuebles IFYR**: completos con coordenadas oficiales
-- **Borde Costero**: pendiente consolidación de planillas
-- **Mataveri**: en preparación
-
-## Capacitación
-
-Documento de uso publicado dentro del sitio en sección Equipo.
+[contactotepuku@gmail.com](mailto:contactotepuku@gmail.com)
 
 ## Licencia
 
-Contenido publicado bajo Creative Commons CC BY-NC 4.0.
+Contenidos publicados bajo Creative Commons CC BY-NC 4.0. Uso libre con atribución, sin fines comerciales. Las imágenes y documentos con derechos de terceros mantienen su licencia de origen.
 
-## Equipo
+## Cómo citar
 
-Tepuku — Centro de Investigaciones Aplicadas en Rapa Nui y Otras Islas
-contactotepuku@gmail.com
+Tepuku (2026). *Inventario de Inmuebles del Siglo XX en Rapa Nui* \[sitio web\]. Centro de Investigaciones Aplicadas en Rapa Nui y Otras Islas. https://inmuebles-sxx.tepuku.org

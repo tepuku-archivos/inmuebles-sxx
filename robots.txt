@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inmuebles-sxx.tepuku.org/sitemap.xml

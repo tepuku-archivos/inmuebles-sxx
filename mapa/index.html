@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa · Inmuebles sXX</title>
+  <meta name="description" content="Mapa interactivo del Inventario de Inmuebles del Siglo XX en Rapa Nui. Nueve inmuebles IFYR y trece zonas BC.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/css/styles.css?v=20260514a">
+  <link rel="canonical" href="https://inmuebles-sxx.tepuku.org/mapa/">
+</head>
+<body>
+
+  <main class="mapa-pagina">
+    <!-- Panel lateral -->
+    <aside class="mapa-panel">
+      <span class="eyebrow">Mapa del Inventario</span>
+      <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">22 puntos georreferenciados</h2>
+
+      <div class="mapa-filtros">
+        <div class="filtro-grupo">
+          <div class="filtro-titulo">Proyecto</div>
+          <div class="filtro-opciones">
+            <label class="filtro-check">
+              <input type="checkbox" value="ifyr" checked> IFYR · Fiscales y religiosos
+            </label>
+            <label class="filtro-check">
+              <input type="checkbox" value="bc" checked> BC · Borde costero
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="filtro-titulo">Listado de puntos</div>
+      <ul class="lista-puntos" id="lista-puntos"></ul>
+    </aside>
+
+    <!-- Mapa -->
+    <div id="mapa-leaflet" class="mapa-leaflet"></div>
+  </main>
+
+  <!-- Panel lateral derecho con detalle del inmueble/zona -->
+  <aside class="panel-detalle" id="panel-detalle" aria-hidden="true">
+    <button class="panel-cerrar" onclick="cerrarPanelDetalle()" aria-label="Cerrar">×</button>
+    <div class="panel-cabecera">
+      <div class="panel-tipo"></div>
+      <h2 class="panel-titulo"></h2>
+    </div>
+    <div class="panel-imagen-wrapper"></div>
+    <div class="panel-cuerpo"></div>
+    <div class="panel-acciones">
+      <a id="panel-sitio-proyecto" href="#" target="_blank" rel="noopener" class="btn btn-primario">Ir al sitio del proyecto</a>
+      <button onclick="cerrarPanelDetalle()" class="btn">Cerrar</button>
+    </div>
+  </aside>
+
+  <script src="/js/common.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/js/mapa.js?v=20260514a"></script>
+  <script>
+    renderHeader('mapa');
+
+    let _data = null;
+    let _map = null;
+
+    cargarPuntos().then(data => {
+      _data = data;
+      _puntosCache = data.puntos;
+
+      _map = initMapa({
+        contenedor: 'mapa-leaflet',
+        centro: [-27.12, -109.36],
+        zoom: 11
+      });
+
+      // Aplicar filtro de URL si existe
+      const params = new URLSearchParams(window.location.search);
+      const filtroURL = params.get('filtro');
+      if (filtroURL) {
+        document.querySelectorAll('.filtro-check input').forEach(c => {
+          c.checked = c.value === filtroURL;
+        });
+      }
+
+      aplicarFiltros();
+
+      // Centrar para mostrar todos los puntos visibles
+      ajustarVista();
+
+      // Listeners
+      document.querySelectorAll('.filtro-check input').forEach(c => {
+        c.addEventListener('change', () => {
+          aplicarFiltros();
+          ajustarVista();
+        });
+      });
+
+      // Botón "Volver a vista general" como L.Control de Leaflet — arriba
+      // a la izquierda, ENCIMA de los controles de zoom.
+      const homeControl = L.control({ position: 'topleft' });
+      homeControl.onAdd = function () {
+        const wrapper = L.DomUtil.create('div', 'leaflet-bar mapa-home-bar');
+        const a = L.DomUtil.create('a', 'mapa-home-control', wrapper);
+        a.href = '#';
+        a.title = 'Ver toda la isla';
+        a.setAttribute('aria-label', 'Volver a vista general');
+        a.innerHTML = '⌂';
+        L.DomEvent
+          .on(a, 'click', L.DomEvent.preventDefault)
+          .on(a, 'click', () => {
+            document.querySelectorAll('.filtro-check input').forEach(c => c.checked = true);
+            aplicarFiltros();
+            ajustarVista();
+          });
+        return wrapper;
+      };
+      homeControl.addTo(_map);
+
+      // Reubicar el control home como primer hijo del topleft (encima del zoom)
+      const topLeft = document.querySelector('.leaflet-top.leaflet-left');
+      const homeWrapper = topLeft.querySelector('.mapa-home-bar');
+      if (topLeft && homeWrapper) topLeft.insertBefore(homeWrapper, topLeft.firstChild);
+    });
+
+    function ajustarVista() {
+      const proyectos = Array.from(document.querySelectorAll('.filtro-check input:checked'))
+        .map(c => c.value);
+      const visibles = _data.puntos.filter(p => proyectos.includes(p.proyecto));
+      if (visibles.length === 0) return;
+
+      const grupo = L.featureGroup(
+        visibles.map(p => L.marker([p.lat, p.lon]))
+      );
+      _map.fitBounds(grupo.getBounds(), {
+        padding: [60, 60],
+        maxZoom: 14
+      });
+    }
+
+    function aplicarFiltros() {
+      const proyectos = Array.from(document.querySelectorAll('.filtro-check input:checked'))
+        .map(c => c.value);
+
+      const visibles = renderPuntos(_map, _data.puntos, { proyecto: proyectos });
+      renderListaPuntos(visibles);
+    }
+
+    function renderListaPuntos(puntos) {
+      const lista = document.getElementById('lista-puntos');
+      lista.innerHTML = puntos.map(p => `
+        <li onclick="centrarEnPunto('${p.id}')">
+          <div class="lista-puntos-titulo">${p.nombre}</div>
+          <div class="lista-puntos-meta">${p.proyecto.toUpperCase()} · ${p.id}</div>
+        </li>
+      `).join('');
+    }
+
+    function centrarEnPunto(id) {
+      // abrirPanelDetalle hace pan & zoom compensado por el panel
+      abrirPanelDetalle(id);
+    }
+  </script>
+</body>
+</html>

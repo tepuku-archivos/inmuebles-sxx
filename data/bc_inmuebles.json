@@ -1,0 +1,1293 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "fuente": "tepuku_inmuebles/archivos/BC/bc_completos_v3.json",
+    "total_inmuebles": 113,
+    "zonas": {
+      "BC-Z1": 23,
+      "BC-Z10": 4,
+      "BC-Z11": 7,
+      "BC-Z12": 6,
+      "BC-Z13": 9,
+      "BC-Z14": 8,
+      "BC-Z2": 7,
+      "BC-Z3": 10,
+      "BC-Z4": 9,
+      "BC-Z6": 3,
+      "BC-Z7": 7,
+      "BC-Z8": 10,
+      "BC-Z9": 10
+    }
+  },
+  "zonas": {
+    "BC-Z1": [
+      {
+        "id": "BC-1.1",
+        "nombre": "Bodega N°1",
+        "anio": 1957,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "bodega N° 1 para guardar materiales situada al este del muelle, de 18,20 m de largo, 9,15 m de ancho y 5 m de altura media. Construcción de madera con techo de zinc acanalado, con canales de zinc por los lados este y oeste, y piso de piedra y cemento, forro exterior de zinc acanalado con una puerta.",
+        "material": "Madera con techo de zinc acanalado, con canales de zinc por los lados este y oeste, y piso de piedra y cemento, forro exterior de zinc acanalado con una puerta",
+        "estado": "Malo",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.2",
+        "nombre": "Pieza Motor Anexa Bodega N° 1",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una pieza anexa a la bodega N°1, y con base de cemento para instalación de un motor, de 3,30 m de largo, 2 m de ancho y 2,80 m de altura media. Construcción de madera con techo de zinc acanalado construcción de madera con techo de zinc acanalado, o piso de cemento y forro exterior de zinc acanalado. Con una puerta. Sobre escrito demolida",
+        "material": null,
+        "estado": "Malo",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.3",
+        "nombre": "mediagua anexa a la bodega N° 1",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una mediagua anexa a la bodega N° 1 para guardar útiles de pesca, de 13, 45 metros de largo, 6 m de ancho y 3 m de altura media. Construcción de madera con techo de fonolita, piso de tierra sin forro exterior ni interior. Sobre escrito demolida",
+        "material": null,
+        "estado": "Malo",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.4",
+        "nombre": "Estanque circular",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un estanque circular de cemento, para suministrar agua a un abrevadero anexo a la bodega N°1 de 4.70 m de circunferencia y 2.20 m de alto. Demolido",
+        "material": "Cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.5",
+        "nombre": "Abrevadero",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un abrevadero de Agua, de piedra y cemento anexo al Estanque Circular,  de 2,80 metros de largo, 0,50 metros de ancho y cero 0,20 m de alto.- Demolido",
+        "material": "Piedra y cemento",
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.6",
+        "nombre": "Bodega N°2 materiales",
+        "anio": 1927,
+        "tipo": "Bodega N°2 Materiales",
+        "tenencia": "Administrador",
+        "resumen": "El inmueble presenta una arquitectura que ha experimentado múltiples transformaciones a lo largo del tiempo, adaptándose a diferentes usos y técnicas constructivas. Se caracteriza por el uso de muros de piedra y una cubierta de material metálico que ha cambiado varias veces, reflejando una evolución en su funcionalidad y estilo. /  / Las imágenes iniciales años 20, muestran una construcción de piedra con un techo posiblemente de zinc y una puerta al centro. El muro de piedra remata en la sección superior con algún tipo de encementado, lo cual podría haber sido una medida para estabilizar la estructura o protegerla de la erosión. /  / Posterior a 1956, el inmueble fue modificado con un cambio en la techumbre, pasando de un techo a dos aguas a uno de una sola agua. En esta etapa, se añadieron dos ventanas en la sección superior. / Hacia el año 2015, el inmueble experimentó una transformación significativa. Se reinstaló un techo a dos aguas, aunque parte de la estructura estaba destruida, lo que incluyó la pérdida de algunos muros de piedra. Para preservar y estabilizar el resto de la construcción, se levantó un muro alto de piedra que cerraba el perímetro, dotando a la edificación de un aspecto más sólido y definido. En este proceso, se excavaron los cimientos, rebajando cerca de un metro para permitir la construcción de una nueva dependencia en el espacio. /  / Actualmente, el techo se ha modificado nuevamente, pasando a un diseño de cuatro aguas que conecta la bodega y el estanque con la nueva dependencia, creando una estructura integrada y ampliada. Este cambio representa una evolución funcional, adaptando el inmueble a nuevas necesidades sin perder el vínculo con su carácter original de piedra y zinc.",
+        "material": null,
+        "estado": "Malo",
+        "url_ficha_pdf": "/fichas/BC/inmuebles/ICH-BC_1.6.pdf"
+      },
+      {
+        "id": "BC-1.7",
+        "nombre": "Estanque",
+        "anio": 1927,
+        "tipo": "Estanque de agua",
+        "tenencia": "Administrador",
+        "resumen": "El inmueble estanque de agua o \"Puna\" es una estructura vernácula que ha evolucionado de un estanque para recolección de agua de lluvia a un espacio utilitario adaptado para su uso actual como camarín con lockers para el personal. Sus transformaciones reflejan tanto cambios en las técnicas constructivas como en sus materiales, destacándose por su integración funcional con edificaciones adyacentes. /  / Originalmente, \"Puna\" era un estanque para recolectar agua de lluvia, construido con muros de piedra en base a pirca y posiblemente estucado en su interior con una capa de coral derretido a alta temperatura (umu kare). Esta técnica, típica de la arquitectura insular, permitía una protección interna que mejoraba la impermeabilidad y la durabilidad del estanque, optimizando su uso como depósito de agua en un entorno donde el recurso es limitado. /  / Entre 1963 y 1980, el inmueble recibió un techo a dos aguas, para proteger el estanque, lo cual marca una transición hacia un uso más protegido y delimitado. La cubierta original era de un agua, alineada como una extensión del techo de la bodega a la que está anexo. /  / Entre 1990 y 2009, el inmueble fue ampliado con la construcción de un anexo de bloques de hormigón que se unió al extremo del estanque. En esta ampliación se realizó una apertura, transformando el estanque en un espacio de acceso y permitiendo su uso como un área de servicio adicional.  /  / En 2015, el techo fue nuevamente modificado, integrándose en un gran techo de cuatro aguas que conecta \"Puna\" con la construcción nueva y la bodega 1.6.  / Actualmente, \"Puna\" sirve como camarín con lockers para el personal, adaptando su espacio a una función completamente distinta de la original, pero manteniendo su estructura y relación con las construcciones vecinas. /  / En conjunto, el inmueble \"Puna\" es un ejemplo de la arquitectura adaptativa de la isla, donde una estructura originariamente utilitaria para almacenamiento de agua ha evolucionado en respuesta a las necesidades de la comunidad. La combinación de técnicas constructivas antiguas y modernas demuestra la capacidad de adaptación de las edificaciones vernáculas, manteniendo su valor patrimonial y su relevancia funcional en el contexto contemporáneo.",
+        "material": "Cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": "/fichas/BC/inmuebles/ICH-BC_1.7.pdf"
+      },
+      {
+        "id": "BC-1.8",
+        "nombre": "Bodega N°3materiales",
+        "anio": 1951,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una bodega N° 3 para guardar materiales situada al este del muelle, de 10,5 m de largo 6,70 metros de ancho y 3,70 metros de altura media. Construcción de piedra y cemento con techo de zinc acanalado, con piso de cemento. Con una puerta.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.9",
+        "nombre": "Muelle",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un muelle de atraque para embarcaciones menores, de 20,70 m de largo coma a 16,20 m de ancho y 1.60 m de altura. Construcción de piedra y cemento. Tiene además dos pilotes de concreto armado de 0,77 metros de largo, 0,72 metros de ancho y 3,95 m de alto. 1 situado en el muelle y el otro instalado en la roca MOTUKAREKE frente al muelle.",
+        "material": null,
+        "estado": "Buen",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.10",
+        "nombre": "Varadero",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un Varadero para embarcaciones menores de concreto, de 29.40 metros de largo y 3,70 metros de ancho.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.11",
+        "nombre": "Bodega N°4 casa de bote",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una bodega N° 4 destinada a casa de botes, situada al norte del muelle, de 22,55 m de largo, 7,70 y metros de ancho y 3,70 metros de altura media. Construcción de piedra y cemento con techo de zinc, piso de cemento. Con una puerta.",
+        "material": null,
+        "estado": "Malo",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.12",
+        "nombre": "Varadero",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un Varadero para Embarcaciones Menores, de 16,80 metros de largo y 2,55 m de ancho. Anexo a bodega N° 4.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.13",
+        "nombre": "Bodega N°5  Bodega cueros",
+        "anio": 1900,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una bodega N° 5 para almacenaje de cueros, situada al Este del Muelle, de 16,45 metros de largo, 8,65 metros de ancho y 3,65 metros de altura media. Construcción de madera con techo de Zinc acanalado, piso de cemento. Con dos puertas.",
+        "material": "madera con techo de Zinc acanalado, piso de cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.14",
+        "nombre": "Bodega N° 6 Materiales Armada (Combustible?)",
+        "anio": 1900,
+        "tipo": "Bodega N° 6 Materiales Armada",
+        "tenencia": "Administrador",
+        "resumen": "El inmueble presenta una construcción de carácter vernácula que destaca por la integración de materiales locales y un diseño que respeta el entorno paisajístico circundante. Es una estructura de planta rectangular y de baja altura, con paredes de piedra volcánica y metal. /  / Originalmente concebido como un estanque de planta cuadrada para la acumulación de agua de lluvia, fue posteriormente adaptado para su uso como bodega y, finalmente, como taller para canoas. Esta transición de funciones se refleja en la evolución de su estructura y materiales, especialmente en su sistema de techado. En su primera etapa de adaptación, el inmueble fue techado con fonolita. /  / Con el tiempo, la fonolita fue reemplazada por láminas de zinc, una elección más ligera y práctica, que facilita el mantenimiento y proporciona una mayor protección frente a las inclemencias del clima. Este cambio de material en la cubierta evidencia una evolución en la adaptación funcional del inmueble, en respuesta a las necesidades cambiantes de su uso como taller.  /  / Esta historia de transformaciones —de estanque a bodega y, finalmente, a taller— y la evolución de su techumbre, de fonolita a zinc, hacen de este inmueble un testimonio de la adaptación y resiliencia en las prácticas constructivas locales. El inmueble no solo preserva su carácter funcional, sino que también mantiene un diálogo continuo con el entorno y la cultura local, evidenciando una conexión con el pasado y la capacidad de adaptación a lo largo del tiempo. /  / Por otro lado, la pared metálica y la sección de madera, donde se encuentra la rampa de acceso, son ampliaciones modernas. La parte de madera alberga baños y una pequeña bodega, representando otra fase de modernización, enfocada en brindar accesibilidad y servicios básicos para el uso contemporáneo del inmueble. /  / En conjunto, el inmueble es un ejemplo de cómo una construcción tradicional puede adaptarse a nuevas funciones mediante ampliaciones y modernizaciones respetuosas, manteniendo su relevancia cultural y funcional dentro de la comunidad. Esta transformación gradual, que abarca desde un estanque hasta un taller multifuncional, destaca tanto la historia como la adaptabilidad del espacio, preservando su esencia y su valor patrimonial en el contexto de la arquitectura local.",
+        "material": "piedra y cemento con techo de fonolita, piso de cemento",
+        "estado": "Malo",
+        "url_ficha_pdf": "/fichas/BC/inmuebles/ICH-BC_1.14.pdf"
+      },
+      {
+        "id": "BC-1.15",
+        "nombre": "Bodega N° 7 Graseria",
+        "anio": 1948,
+        "tipo": "Bodega N° 7 Grasería",
+        "tenencia": "Administrador",
+        "resumen": "El inmueble, actualmente adaptado y transformado, destaca por su carácter vernacular y su proceso de evolución arquitectónica, reflejando cambios funcionales y materiales a lo largo del tiempo. Es una estructura de planta alargada y baja altura, que combina muros de mampostería de piedra con techos de materiales modernos. Hoy en día, se utiliza como el Centro de la Inclusión Ka Aha Ra Ia, lo que añade un valor comunitario y social significativo a su función. /  / Originalmente, el inmueble fue concebido como un galpón para ovejas, con muros de piedra en mampostería y un techo de paja. Posteriormente, entre 1900 y 1920, el galpón sufrió una serie de modificaciones, en las que se cerró la parte abierta con planchas de zinc, sustituyendo la paja original por un techo metálico.  /  / En una etapa más reciente,1948 la estructura experimentó cambios significativos. Al parecer, uno de los muros de piedra original se mantuvo y se modificó la forma del inmueble, incorporando un estanque de agua como parte integral de la estructura. Modificándose la techumbre en 1954. /  / En su estado actual, el inmueble muestra una amalgama de elementos tradicionales y modernos. El estanque se ha integrado a la estructura, evidenciando un proceso de resignificación del espacio. Los muros de piedra originales, combinados con el zinc y otros materiales contemporáneos, le otorgan un aspecto rústico que conserva su esencia vernacular mientras se adapta a nuevos usos. /  / Este inmueble es un ejemplo notable de cómo una estructura diseñada para la ganadería ha evolucionado hacia una función más versátil, manteniendo su relevancia cultural y funcional. La combinación de técnicas constructivas antiguas con materiales modernos habla de un patrimonio arquitectónico dinámico, que continúa adaptándose a las demandas actuales sin perder su conexión con la historia local y la identidad insular.",
+        "material": "piedra y cemento con techo de fonolita, con canales de zinc por el lado Este, piso de cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": "/fichas/BC/inmuebles/ICH-BC_1.15.pdf"
+      },
+      {
+        "id": "BC-1.16",
+        "nombre": "Muelle de atraque",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "No se señala en informe",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.17",
+        "nombre": "Casa Habitacion encargado de cueros",
+        "anio": 1947,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Casa habitación para obreros de la compañía, situada en Hanga Piko, de 10,30 metros de largo, 5,55 metros de ancho y 2,80 metros de altura media. Construcción de madera con techo de fonolita, con canales de zinc por los lados este u oeste, piso de madera y un coirredor por el lado oeste. Compuesta de tres piezas. Con dos puertas y cuatro ventanes.",
+        "material": "Madera",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.18",
+        "nombre": "cocina anexa",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Cocina anexa a la casa habitación de 6,30 metros de largo, 5,80 metros de ancho y 2,20 metros de altura media. Construccion de piedra y cemento con techo de fonolita y piso de madera. Con una puerta.",
+        "material": "Piedra y cemento",
+        "estado": "Malo",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.19",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Estanque de piedra y cemento para agua de bebida anexo a la cocina de 3,4 metros de largo, 2,10 metros de ancho y 1,80 metros de profundidad.",
+        "material": null,
+        "estado": "Malo",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.20",
+        "nombre": "Casa Habitacion",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Casa habitación para obreros de la compañía, situada en el cerro de Hanga Piko, de 7,60 metros de largo, 4,70 metros de ancho y 2,40 metros de altura media. Cosntrucción de piedra y cemento con techo de zinc acanalado, con canales de zinc por los lados este y oeste. Compuesta de dos piezas. Con una puerta y dos ventanas.",
+        "material": null,
+        "estado": "Malo",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.21",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Estanque de piedra y cemento para agua de bebida anexo a la casa habitación, de2,55 metros de largo, 1,70 metros de ancho y 1,20 metros de profundidad.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-1.22",
+        "nombre": "Cocina anexa",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Cocina anexa a la casa habitación de 4,20 metros de largo, 3,65 metros de ancho y 2,30 metros de altura media. Construccion de madera con techo de zinc acanalado y piso de tierra, forro exterior de zinc acanalado y sin forro interior. Con dos puertas.",
+        "material": null,
+        "estado": "Malo",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-2.26",
+        "nombre": "Estanque",
+        "anio": 1948,
+        "tipo": "Estanque",
+        "tenencia": "Administrador",
+        "resumen": "El inmueble, actualmente adaptado y transformado, destaca por su carácter vernacular y su proceso de evolución arquitectónica, reflejando cambios funcionales y materiales a lo largo del tiempo. Es una estructura de planta alargada y baja altura, que combina muros de mampostería de piedra con techos de materiales modernos. Hoy en día, se utiliza como el Centro de la Inclusión Ka Aha Ra Ia, lo que añade un valor comunitario y social significativo a su función. /  / Originalmente, el inmueble fue concebido como un galpón para ovejas, con muros de piedra en mampostería y un techo de paja. Posteriormente, entre 1900 y 1920, el galpón sufrió una serie de modificaciones, en las que se cerró la parte abierta con planchas de zinc, sustituyendo la paja original por un techo metálico.  /  / En una etapa más reciente,1948 la estructura experimentó cambios significativos. Al parecer, uno de los muros de piedra original se mantuvo y se modificó la forma del inmueble, incorporando un estanque de agua como parte integral de la estructura. Modificándose la techumbre en 1954. /  / En su estado actual, el inmueble muestra una amalgama de elementos tradicionales y modernos. El estanque se ha integrado a la estructura, evidenciando un proceso de resignificación del espacio. Los muros de piedra originales, combinados con el zinc y otros materiales contemporáneos, le otorgan un aspecto rústico que conserva su esencia vernacular mientras se adapta a nuevos usos. /  / Este inmueble es un ejemplo notable de cómo una estructura diseñada para la ganadería ha evolucionado hacia una función más versátil, manteniendo su relevancia cultural y funcional. La combinación de técnicas constructivas antiguas con materiales modernos habla de un patrimonio arquitectónico dinámico, que continúa adaptándose a las demandas actuales sin perder su conexión con la historia local y la identidad insular.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      }
+    ],
+    "BC-Z10": [
+      {
+        "id": "BC-11.1",
+        "nombre": "Molino",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un Molino de Viento para agua, situado en Hanga Roa, montado en torres cónicas cuadrangulares de madera, 6.80 metros de altura y 2.05 metros en la base, montadas en fundación de piedra y cemento. Diámetro de la rueda de viento 6 pies. Cilindro de 0.30 metros de longitud y 0.20 metros de circunferencia exterior. Aparece en mina: desarmado",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-11.2",
+        "nombre": "Pozo",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Pozo de 3.40 metros de profundidad y 1.50 metros de diámetro.",
+        "material": "Madera",
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-11.3",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un estanque de piedra y cemento de 3.90 metros de largo, 3.20 metros de ancho y 1.20 metros de alto, para el almacenamiento del agua del molino y para surtir los abrevaderos anexos.",
+        "material": "Piedra y cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-11.4",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Abrevadero de agua, de piedra y cemento, anexo al estanque 10,35x0,8x0,2",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      }
+    ],
+    "BC-Z11": [
+      {
+        "id": "BC-12.1",
+        "nombre": "Molino",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un Molino de viento para agua en Tahai, montado en torres cónicas cuadrangulares de varillas de fierro, de 12.30 metros de altura y 2.50 metros de base, montadas en fundación de piedra y cemento. Diámetro de la rueda de viento (ilegible número) pies. Cilindro de 0.45 metros de longitud y 0.35 metros de circunferencia exterior.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-12.2",
+        "nombre": "Pozo",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Pozo de 4.50 metros de profundidad y 1.10 metros de diámetro.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-12.3",
+        "nombre": "Cañeria de descarga",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación de Cañería de descarga del molino al estanque de 1 pulgadas de diámetro y 6.70 metros de longitud y reducida de 1 pulgada a ¾ pulgadas de diámetro a 7 metros del Estanque.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-12.4",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un estanque de piedra y cemento de 5 metros de largo, 5 metros de ancho y 2 metros de alto, para el almacenamiento del agua del molino y para surtir los abrevaderos anexos",
+        "material": "Piedra y cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-12.5",
+        "nombre": "Cañeria 2",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación de cañeria de 2\" de diámetro y 14,8 m de longitud desde el departamento de motor achique al estanque.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-12.6",
+        "nombre": "Abrevadero",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un abrevadero de piedra y cemento, anexo al estanque anterior, }de 12.20 metros de largo, 0.65 metros de ancho y 0.25 metros de alto.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-12.7",
+        "nombre": "Un departamento",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un departamento con base de cemento para instalación de un motor de achique de 2,25 m x 2,25 y 2,20 de alto. Medio. Cosntucción de madera contecho de zinc, piso de cemento, forro exterior de madera sin forro int.",
+        "material": null,
+        "estado": "Buen",
+        "url_ficha_pdf": null
+      }
+    ],
+    "BC-Z12": [
+      {
+        "id": "BC-12.8",
+        "nombre": "Molino",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un Molino de viento para agua en Hanga Kao Kao, montado en torres cónicas cuadrangulares de varillas de fierro, de 12.30 metros de altura y 2.50 metros de base, montadas en fundación de piedra y cemento. Diámetro de la rueda de viento (ilegible número) pies. Cilindro de 0.45 metros de longitud y 0.35 metros de circunferencia exterior.",
+        "material": "Fierro",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-12.9",
+        "nombre": "Pozo",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Pozo de 4 metros de profundidad y 1.20 metros de diámetro.",
+        "material": null,
+        "estado": "-",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-12.10",
+        "nombre": "Cañeria de descarga",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación de cañeria de 1\" de diámetro y 26 m de longitud desde el departamento de motor achique al estanque.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-12.11",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un estanque de piedra y cemento de 4.05 metros de largo,3.10 metros de ancho y 1.45 metros de alto, para el almacenamiento del agua del molino y para surtir los abrevaderos anexos",
+        "material": "Piedra y cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-12.12",
+        "nombre": "Cañeria 2",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": null,
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-12.13",
+        "nombre": "Abrevadero",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un abrevadero de piedra y cemento, situado al sur del estanque anterior, de 4,55 metros de largo, 0.6 metros de ancho y 0.25 metros de alto.",
+        "material": "Piedra y cemento",
+        "estado": null,
+        "url_ficha_pdf": null
+      }
+    ],
+    "BC-Z13": [
+      {
+        "id": "BC-13.1",
+        "nombre": "Molino",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un Molino de viento para agua en Hanga Te Tenga, montado en torres cónicas cuadrangulares de varillas de fierro, de 9 metros de altura y 1.95 metros en la base, montadas en fundación de piedra y cemento. Diámetro de la rueda de viento 6 pies. Cilindro de 0.60 metros de longitud y 0.50 metros de circunferencia exterior.",
+        "material": "Fierro",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-13.2",
+        "nombre": "Pozo",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Pozo de 3.60 metros de profundidad y 0.90 metro de diámetro.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-13.3",
+        "nombre": "Cañeria de descarga",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación cañeria de descarga del molino al estanque de1\" diámetro de 23,30 m de long,",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-13.4",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un estanque de piedra y cemento de 3.40 metros de largo, 3.20 metros de ancho y 1.90 metros de alto, para el almacenamiento del agua del molino y para surtir los abrevaderos anexos.",
+        "material": "Piedra y cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-13.5",
+        "nombre": "Cañeria 2",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación cañeria de 1\" diámetro de 53 m de long, para surtir de agua abrevaderos situados al norte del estanque.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-13.6",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Abrevadero de agua, de piedra y cemento, anexo al estanque 4,75x0,7x0,25",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-13.7",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Abrevadero de agua, de piedra y cemento, situado al norte del molino, 10,8x0,75x0,25",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-13.8",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Abrevadero de agua, de piedra y cemento, situado al norte del molino,  7,2x0,7x0,20",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-13.9",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Abrevadero de agua, de piedra y cemento, situado al este de los abrevaderos anteriores,  5,7x0,5x0,2",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      }
+    ],
+    "BC-Z14": [
+      {
+        "id": "BC-14.1",
+        "nombre": "Molino",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un Molino de viento para agua, situado en Mataveri Otai, montadas en torres cónicas cuadrangulares de varillas de fierro, de 15 metros de altura y tres metros en la base, montadas en fundaciones de piedra y cemento. Diámetro de la rueda de viento 6 pies. Cilindro de 0.60 metros de longitud y 0.38 metros de circunferencia exterior.",
+        "material": "Fierro",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-14.2",
+        "nombre": "Pozo",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Pozo de 9 metros de profundidad y 0.50 metros de diámetro",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-14.3",
+        "nombre": "Cañeria de descarga",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "una instalación de Cañería de descarga del molino al estanque, de 2 pulgadas de diámetro, 0*.10 metros de longitud y reducida de 2 pulgadas a 1 pulgada a 45.30 metros del estanque",
+        "material": null,
+        "estado": "Buen",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-14.4",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un estanque de piedra y cemento de 6 metros de largo, 4 metros de ancho y 1.50 metros de alto, para el almacenamiento del agua del molino y para surtir los abrevaderos anexos.",
+        "material": "Piedra y cemento",
+        "estado": "Buen",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-14.5",
+        "nombre": "Cañeria 2",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación de cañería de ¾ de pulgada de 23.60 metros de longitud para surtir agua al abrevadero, situado al Este del estanque.",
+        "material": null,
+        "estado": "Buen",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-14.6",
+        "nombre": "Abrevadero",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un abrevadero de agua, de piedra y cemento, situado al Este del Estanque, de 12.60 metros de largo, 0.65 metros de ancho y 0.30 metros de alto.",
+        "material": "Piedra y cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-14.7",
+        "nombre": "Instalación Cañeria",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "No se señala en informe",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-14.8",
+        "nombre": "Departamento para bombas",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "No se señala en informe",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      }
+    ],
+    "BC-Z2": [
+      {
+        "id": "BC-2.1",
+        "nombre": "Molino",
+        "anio": 1953,
+        "tipo": "Estanque / Abrevadero / Abrevadero",
+        "tenencia": "Administrador",
+        "resumen": "En el área de Vinapu existían varios inmuebles que conformaban un sistema hidráulico destinado a la recolección, almacenamiento y distribución de agua. Sin embargo, el molino de viento (2.1), el abrevadero 2.7, el pozo y la cañería de descarga ya no existen, pero dejaron un registro importante de las técnicas y métodos utilizados en la época para gestionar el recurso hídrico en la isla. /  / Estanque de Piedra y Cemento  / Este estanque fue construido entre 1920 y 1953, diseñado para almacenar agua proveniente del molino y abastecer a los abrevaderos anexos. Con dimensiones de 3.3 metros de largo, 3.2 metros de ancho y 1.7 metros de alto, el estanque está hecho de piedra y cemento, destacándose por su robustez y durabilidad. Esta estructura era el núcleo del sistema hidráulico de Vinapu, conservando el agua para distribuirla en el área. /  / Abrevaderos de Piedra y Cemento / Tres abrevaderos, complementaban el sistema de distribución de agua en Vinapu. El primero mide 10.7 metros de largo, 0.7 metros de ancho y 0.3 metros de alto, mientras que el segundo adosado al estanque de agua tiene unas dimensiones de 4.8 metros de largo, 0.7 metros de ancho y 0.3 metros de alto. / Además de los abrevaderos mencionados, existe otro abrevadero en el área, numero 2.7. Esta estructura, aunque actualmente en ruinas, muestra los restos de lo que fue un abrevadero más. Estaban construidos con piedra y cemento, y su diseño alargado permitía que el ganado accediera al agua fácilmente.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-2.2",
+        "nombre": "Pozo",
+        "anio": 1953,
+        "tipo": "Estanque / Abrevadero / Abrevadero",
+        "tenencia": "Administrador",
+        "resumen": "En el área de Vinapu existían varios inmuebles que conformaban un sistema hidráulico destinado a la recolección, almacenamiento y distribución de agua. Sin embargo, el molino de viento (2.1), el abrevadero 2.7, el pozo y la cañería de descarga ya no existen, pero dejaron un registro importante de las técnicas y métodos utilizados en la época para gestionar el recurso hídrico en la isla. /  / Estanque de Piedra y Cemento  / Este estanque fue construido entre 1920 y 1953, diseñado para almacenar agua proveniente del molino y abastecer a los abrevaderos anexos. Con dimensiones de 3.3 metros de largo, 3.2 metros de ancho y 1.7 metros de alto, el estanque está hecho de piedra y cemento, destacándose por su robustez y durabilidad. Esta estructura era el núcleo del sistema hidráulico de Vinapu, conservando el agua para distribuirla en el área. /  / Abrevaderos de Piedra y Cemento / Tres abrevaderos, complementaban el sistema de distribución de agua en Vinapu. El primero mide 10.7 metros de largo, 0.7 metros de ancho y 0.3 metros de alto, mientras que el segundo adosado al estanque de agua tiene unas dimensiones de 4.8 metros de largo, 0.7 metros de ancho y 0.3 metros de alto. / Además de los abrevaderos mencionados, existe otro abrevadero en el área, numero 2.7. Esta estructura, aunque actualmente en ruinas, muestra los restos de lo que fue un abrevadero más. Estaban construidos con piedra y cemento, y su diseño alargado permitía que el ganado accediera al agua fácilmente.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-2.3",
+        "nombre": "Cañeria de descarga",
+        "anio": 1953,
+        "tipo": "Estanque / Abrevadero / Abrevadero",
+        "tenencia": "Administrador",
+        "resumen": "En el área de Vinapu existían varios inmuebles que conformaban un sistema hidráulico destinado a la recolección, almacenamiento y distribución de agua. Sin embargo, el molino de viento (2.1), el abrevadero 2.7, el pozo y la cañería de descarga ya no existen, pero dejaron un registro importante de las técnicas y métodos utilizados en la época para gestionar el recurso hídrico en la isla. /  / Estanque de Piedra y Cemento  / Este estanque fue construido entre 1920 y 1953, diseñado para almacenar agua proveniente del molino y abastecer a los abrevaderos anexos. Con dimensiones de 3.3 metros de largo, 3.2 metros de ancho y 1.7 metros de alto, el estanque está hecho de piedra y cemento, destacándose por su robustez y durabilidad. Esta estructura era el núcleo del sistema hidráulico de Vinapu, conservando el agua para distribuirla en el área. /  / Abrevaderos de Piedra y Cemento / Tres abrevaderos, complementaban el sistema de distribución de agua en Vinapu. El primero mide 10.7 metros de largo, 0.7 metros de ancho y 0.3 metros de alto, mientras que el segundo adosado al estanque de agua tiene unas dimensiones de 4.8 metros de largo, 0.7 metros de ancho y 0.3 metros de alto. / Además de los abrevaderos mencionados, existe otro abrevadero en el área, numero 2.7. Esta estructura, aunque actualmente en ruinas, muestra los restos de lo que fue un abrevadero más. Estaban construidos con piedra y cemento, y su diseño alargado permitía que el ganado accediera al agua fácilmente.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-2.4",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": "Estanque",
+        "tenencia": "Administrador",
+        "resumen": "En el área de Vinapu existían varios inmuebles que conformaban un sistema hidráulico destinado a la recolección, almacenamiento y distribución de agua. Sin embargo, el molino de viento (2.1), el abrevadero 2.7, el pozo y la cañería de descarga ya no existen, pero dejaron un registro importante de las técnicas y métodos utilizados en la época para gestionar el recurso hídrico en la isla. /  / Estanque de Piedra y Cemento  / Este estanque fue construido entre 1920 y 1953, diseñado para almacenar agua proveniente del molino y abastecer a los abrevaderos anexos. Con dimensiones de 3.3 metros de largo, 3.2 metros de ancho y 1.7 metros de alto, el estanque está hecho de piedra y cemento, destacándose por su robustez y durabilidad. Esta estructura era el núcleo del sistema hidráulico de Vinapu, conservando el agua para distribuirla en el área. /  / Abrevaderos de Piedra y Cemento / Tres abrevaderos, complementaban el sistema de distribución de agua en Vinapu. El primero mide 10.7 metros de largo, 0.7 metros de ancho y 0.3 metros de alto, mientras que el segundo adosado al estanque de agua tiene unas dimensiones de 4.8 metros de largo, 0.7 metros de ancho y 0.3 metros de alto. / Además de los abrevaderos mencionados, existe otro abrevadero en el área, numero 2.7. Esta estructura, aunque actualmente en ruinas, muestra los restos de lo que fue un abrevadero más. Estaban construidos con piedra y cemento, y su diseño alargado permitía que el ganado accediera al agua fácilmente.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-2.5",
+        "nombre": "Abrevadero",
+        "anio": 1953,
+        "tipo": "Abrevadero",
+        "tenencia": "Administrador",
+        "resumen": "En el área de Vinapu existían varios inmuebles que conformaban un sistema hidráulico destinado a la recolección, almacenamiento y distribución de agua. Sin embargo, el molino de viento (2.1), el abrevadero 2.7, el pozo y la cañería de descarga ya no existen, pero dejaron un registro importante de las técnicas y métodos utilizados en la época para gestionar el recurso hídrico en la isla. /  / Estanque de Piedra y Cemento  / Este estanque fue construido entre 1920 y 1953, diseñado para almacenar agua proveniente del molino y abastecer a los abrevaderos anexos. Con dimensiones de 3.3 metros de largo, 3.2 metros de ancho y 1.7 metros de alto, el estanque está hecho de piedra y cemento, destacándose por su robustez y durabilidad. Esta estructura era el núcleo del sistema hidráulico de Vinapu, conservando el agua para distribuirla en el área. /  / Abrevaderos de Piedra y Cemento / Tres abrevaderos, complementaban el sistema de distribución de agua en Vinapu. El primero mide 10.7 metros de largo, 0.7 metros de ancho y 0.3 metros de alto, mientras que el segundo adosado al estanque de agua tiene unas dimensiones de 4.8 metros de largo, 0.7 metros de ancho y 0.3 metros de alto. / Además de los abrevaderos mencionados, existe otro abrevadero en el área, numero 2.7. Esta estructura, aunque actualmente en ruinas, muestra los restos de lo que fue un abrevadero más. Estaban construidos con piedra y cemento, y su diseño alargado permitía que el ganado accediera al agua fácilmente.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-2.6",
+        "nombre": "Abrevadero",
+        "anio": 1953,
+        "tipo": "Abrevadero",
+        "tenencia": "Administrador",
+        "resumen": "En el área de Vinapu existían varios inmuebles que conformaban un sistema hidráulico destinado a la recolección, almacenamiento y distribución de agua. Sin embargo, el molino de viento (2.1), el abrevadero 2.7, el pozo y la cañería de descarga ya no existen, pero dejaron un registro importante de las técnicas y métodos utilizados en la época para gestionar el recurso hídrico en la isla. /  / Estanque de Piedra y Cemento  / Este estanque fue construido entre 1920 y 1953, diseñado para almacenar agua proveniente del molino y abastecer a los abrevaderos anexos. Con dimensiones de 3.3 metros de largo, 3.2 metros de ancho y 1.7 metros de alto, el estanque está hecho de piedra y cemento, destacándose por su robustez y durabilidad. Esta estructura era el núcleo del sistema hidráulico de Vinapu, conservando el agua para distribuirla en el área. /  / Abrevaderos de Piedra y Cemento / Tres abrevaderos, complementaban el sistema de distribución de agua en Vinapu. El primero mide 10.7 metros de largo, 0.7 metros de ancho y 0.3 metros de alto, mientras que el segundo adosado al estanque de agua tiene unas dimensiones de 4.8 metros de largo, 0.7 metros de ancho y 0.3 metros de alto. / Además de los abrevaderos mencionados, existe otro abrevadero en el área, numero 2.7. Esta estructura, aunque actualmente en ruinas, muestra los restos de lo que fue un abrevadero más. Estaban construidos con piedra y cemento, y su diseño alargado permitía que el ganado accediera al agua fácilmente.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-2.7",
+        "nombre": "Abrevadero",
+        "anio": 1953,
+        "tipo": "Estanque / Abrevadero / Abrevadero",
+        "tenencia": "Administrador",
+        "resumen": "En el área de Vinapu existían varios inmuebles que conformaban un sistema hidráulico destinado a la recolección, almacenamiento y distribución de agua. Sin embargo, el molino de viento (2.1), el abrevadero 2.7, el pozo y la cañería de descarga ya no existen, pero dejaron un registro importante de las técnicas y métodos utilizados en la época para gestionar el recurso hídrico en la isla. /  / Estanque de Piedra y Cemento  / Este estanque fue construido entre 1920 y 1953, diseñado para almacenar agua proveniente del molino y abastecer a los abrevaderos anexos. Con dimensiones de 3.3 metros de largo, 3.2 metros de ancho y 1.7 metros de alto, el estanque está hecho de piedra y cemento, destacándose por su robustez y durabilidad. Esta estructura era el núcleo del sistema hidráulico de Vinapu, conservando el agua para distribuirla en el área. /  / Abrevaderos de Piedra y Cemento / Tres abrevaderos, complementaban el sistema de distribución de agua en Vinapu. El primero mide 10.7 metros de largo, 0.7 metros de ancho y 0.3 metros de alto, mientras que el segundo adosado al estanque de agua tiene unas dimensiones de 4.8 metros de largo, 0.7 metros de ancho y 0.3 metros de alto. / Además de los abrevaderos mencionados, existe otro abrevadero en el área, numero 2.7. Esta estructura, aunque actualmente en ruinas, muestra los restos de lo que fue un abrevadero más. Estaban construidos con piedra y cemento, y su diseño alargado permitía que el ganado accediera al agua fácilmente.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      }
+    ],
+    "BC-Z3": [
+      {
+        "id": "BC-3.1",
+        "nombre": "Casa Habitacion",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Casa habitación para obreros de la compañía, situada en Vaihu, de 6,50 metros de largo, 6,50 metros de ancho y 2,80 metros de altura media. Cosntrucción de piedra y cemento con techo de fonolita, con canales de zinc por el lado este, piso de cemento. Compuesta de tres piezas. Con cuatro puerta y cinco ventanas.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-3.2",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Estanque de piedra y cemento para agua de bebida anexo a la casa habitación, de 5,20 metros de largo, 2,10 metros de ancho y 2,05 metros de profundidad.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-3.3",
+        "nombre": "Molino",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un Molino de viento para agua en Vaihu, montado en torres cónicas cuadrangulares de varillas de madera, de 7,60 metros de altura y 2,30 metros en la base, montadas en fundación de piedra y cemento. Diámetro de la rueda de viento 6 pies. Cilindro de 0.55 metros de longitud y 0.40 metros de circunferencia exterior.",
+        "material": null,
+        "estado": "Malo",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-3.4",
+        "nombre": "Pozo",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación cañeria de descarga del molino al estanque de 2\" diámetro de 6,10 m de long,",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-3.5",
+        "nombre": "Cañeria de descarga",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Pozo de 6.00 metros de profundidad y 2,30 metro de diámetro",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-3.6",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": "Estanque",
+        "tenencia": "Administrado",
+        "resumen": "El sitio en Vaihu se conformaba como un complejo funcional dedicado a las actividades de almacenamiento y suministro de agua, así como a la habitación de los obreros de la compañía que operaba en el área. A través de un conjunto de estructuras interconectadas, este espacio buscaba satisfacer las necesidades de agua potable y abrevadero para animales, además de proporcionar vivienda y soporte a sus trabajadores. /  / Estructuras Originales: /  / Casa Habitación para Obreros (ID 3.1) / La casa habitación era una construcción de planta cuadrada y baja altura, aproximadamente 6.5 metros de largo y ancho, con una altura de 2.8 metros. Construida con piedra y cemento.  El techo de fonolita y las canales de zinc instaladas en el lado este servían para recolectar y canalizar el agua de lluvia, maximizando el aprovechamiento de recursos naturales. En su interior, la casa se distribuía en tres habitaciones, y contaba con cuatro puertas y cinco ventanas. /  / Sistema de Abastecimiento de Agua / El sistema de agua en Vaihu era fundamental para el funcionamiento del sitio. Se conformaba de varias estructuras de almacenamiento y distribución: / Molino de Viento (ID 3.3): Este molino, montado sobre una torre cónica de varillas de madera y con una altura de 7.6 metros, generaba la energía necesaria para bombear agua. Su rueda de viento tenía un diámetro de 6 pies, y el cilindro medía 0.55 metros de longitud y 0.40 metros de circunferencia exterior. / Pozo y Cañería de Descarga (IDs 3.4 y 3.5): Un pozo de 6 metros de profundidad y 2.3 metros de diámetro se conectaba al molino mediante una cañería de descarga de 6.1 metros de longitud y 2 pulgadas de diámetro. Este sistema transportaba el agua extraída hasta los estanques, asegurando el abastecimiento necesario para el sitio. / Estanque Principal (ID 3.6): Este estanque de piedra y cemento, con dimensiones de 3.4 metros de largo, 3.4 metros de ancho y 2 metros de altura, servía como depósito central de agua para el sitio. Alimentado por el molino, su propósito era almacenar agua para surtir los abrevaderos adyacentes y proporcionar un suministro confiable tanto para consumo humano como para los animales. En la actualidad, este estanque ha sido intervenido y adaptado para un uso diferente: se utiliza como bodega, lo que implica que su estructura original ha sido modificada para acomodar esta nueva función, perdiendo así parte de su carácter original de almacenamiento de agua. / Abrevaderos (ID 3.7 y 3.8): Dos abrevaderos de piedra y cemento complementaban el sistema de agua. El primero (ID 3.7), de mayor tamaño, medía 13.3 metros de largo, 0.8 metros de ancho y 0.3 metros de alto, y estaba anexo al estanque principal. El segundo (ID 3.8), de 2.3 metros de largo, 0.3 metros de ancho y 0.3 metros de alto, se ubicaba también cerca del estanque, aunque las fotografías actuales muestran que solo queda la base de esta estructura, evidenciando su deterioro y el paso del tiempo. /  /  / Estanque para Agua Potable (ID 3.2) / Anexo a la casa habitación, se encontraba un segundo estanque de agua potable de menor tamaño (5.2 metros de largo, 2.1 metros de ancho y 2.05 metros de profundidad). Este estanque estaba diseñado para almacenar agua de bebida, proporcionando un recurso vital para los obreros y residentes del sitio. /  / Estado Actual del Sitio: / Actualmente, gran parte de estas estructuras han desaparecido, quedando solo algunos vestigios. La casa habitación no ha sido verificada en sitio, y se desconoce si alguna de las edificaciones actuales corresponde a esta construcción histórica. Del sistema de agua, solo permanecen el estanque principal (ID 3.6), que, como se ha mencionado, ha sido adaptado para funcionar como bodega, alterando su estructura original, y la base del abrevadero menor (ID 3.8). El resto de las estructuras, como el molino, el pozo y la cañería de descarga, han desaparecido, dejando una huella incompleta de lo que alguna vez fue un sistema integral de abastecimiento de agua en Vaihu.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": "/fichas/BC/inmuebles/ICH-BC_3.6.pdf"
+      },
+      {
+        "id": "BC-3.7",
+        "nombre": "Abrevadero",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Abrevadero de piedra y cemento anexo al estanque 13,3x0,8x0,3",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-3.8",
+        "nombre": "Abrevadero",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Abrevadero de piedra y cemento,  anexo al estanque 3,6x0,3x0,3",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-3.9",
+        "nombre": "Casa de campo 3",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Construccion de cemento de 6,5 x 6,5 x 2,6 m altura media. Divisiones int de cemento. Consta de comedor y 3 dormitorios. Piso de cemento y techo de zinc.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-3.10",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un estanque de piedra y cemento para agua de bebida, anexo a la casa habitacion,  de 5,20 metros de largo, 2,10 metros de ancho y 2,05 metros de profundidad.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      }
+    ],
+    "BC-Z4": [
+      {
+        "id": "BC-4.1",
+        "nombre": "Molino",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un Molino de viento para agua en Aka Hanga, montado en torres cónicas cuadrangulares de varillas de madera, de 6.80 metros de altura y 1.80 metros en la base, montadas en fundación de piedra y cemento. Diámetro de la rueda de viento 8 pies. Cilindro de 0.60 metros de longitud y 0.40 metros de circunferencia exterior.",
+        "material": "Madera",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-4.2",
+        "nombre": "Pozo",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Pozo de 6.70 metros de profundidad y 0.80 metro de diámetro",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-4.3",
+        "nombre": "Cañeria de descarga",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación cañeria de descarga del molino al estanque de1\" diámetro de 205 m de long,",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-4.4",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": "Abrevadero",
+        "tenencia": "Administrador",
+        "resumen": "Un estanque de piedra y cemento de 4.10 metros de largo, 2.60 metros de ancho y 1.50 metros de alto, para el almacenamiento del agua del molino y para surtir los abrevaderos anexos",
+        "material": "Piedra y cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-4.5",
+        "nombre": "Cañeria 2",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación cañeria de 3/4\" diámetro de 17 m de long, para surtir de agua a un abrevadero situado al sur del estanque.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-4.6",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": "Estanque",
+        "tenencia": "Administrador",
+        "resumen": "Abrevadero de agua, de piedra y cemento, situado al sur del estanque, de 4,8x0,5x0,2",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-4.7",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Abrevadero de agua, de piedra y cemento, situado al este del estanque, de  3,4x0,5x0,2",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-4.8",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Abrevadero de agua, de piedra y cemento, anexo al abrevadero anteriuor, de 4,8x0,5x0,2",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-4.9",
+        "nombre": "Cañeria",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación cañeria de 3/4\" diámetro y 41,6 m de long, para surtir de agua a un abrevadero situado al este del estanque.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      }
+    ],
+    "BC-Z6": [
+      {
+        "id": "BC-7.8",
+        "nombre": "Casa Habitacion 12",
+        "anio": 1952,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Construccion de piedra y cemento de7,2 x 4,6 x 2,45m altura media. Construcción de piedra y cemento con Techo de fonolita, con canales de zinc por el lado sur, piso de cemento y un corredor con piso de cemento por el lado norte . Compuesta de 3 piezas. Con una puerta y tres ventanas.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-7.9",
+        "nombre": "Cocina anexa",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Cocina anexa de 4,5 x 3,4m por 1,8 de altura media. Construcción de piedra con techo de fonolita y piso de cemento. Con una puerta.",
+        "material": null,
+        "estado": "Malo",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-7.10",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un estanque de piedra y cemento para agua de bebida anexo a la casa habitación de 4,50 metros de largo, 3,40 metros de ancho y 1.10 metros de alto.",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      }
+    ],
+    "BC-Z7": [
+      {
+        "id": "BC-7.1",
+        "nombre": "Molino",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un Molino de viento para agua en La Perouse, montado en torres cónicas cuadrangulares de varillas de fierro, de 9.50 metros de altura y 2 metros en la base, montadas en fundación de piedra y cemento. Diámetro de la rueda de viento 6 pies. Cilindro de 0.40 metros de longitud y 0.25 metros de circunferencia exterior.",
+        "material": "Fierro",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-7.2",
+        "nombre": "Pozo",
+        "anio": 1953,
+        "tipo": "Pozo",
+        "tenencia": "Administrador",
+        "resumen": "El sitio de Muku Roa fue un complejo de infraestructura diseñado para la recolección, almacenamiento y distribución de agua, impulsado por un molino de viento. Las instalaciones aquí presentes originalmente incluían un molino de viento, un pozo, varios tramos de tuberías de descarga, un estanque y dos abrevaderos. Este sistema facilitaba el suministro de agua, principalmente para el ganado en la zona, usando los abrevaderos anexos al estanque como puntos de acceso. / Estructuras Existentes y Estado Actual / Estanque de Agua (ID 7.4) / Descripción Original: Un estanque de piedra y cemento de 3.20 metros de largo, 3.20 metros de ancho y 1.90 metros de alto, diseñado para almacenar agua y abastecer los abrevaderos anexos. / Estado Actual: El estanque ya no se utiliza para el almacenamiento de agua. Aunque su estructura permanece en buen estado, actualmente no cumple con su función original y ha sido dejado sin uso. / Abrevadero Oeste (ID 7.6) / Descripción Original: Un abrevadero de piedra y cemento de 14,50 metros de largo, 0,70 metros de ancho y 0,20 metros de alto, anexo al estanque y utilizado para abastecer de agua al ganado. / Estado Actual: Este abrevadero se utiliza ocasionalmente. Su estructura permanece en buenas condiciones, lo cual permite su uso intermitente en la actualidad. / Abrevadero Este (ID 7.7) / Descripción Original: Un abrevadero de piedra y cemento de 10,60 metros de largo, 0,65 metros de ancho y 0,20 metros de alto, ubicado al este del estanque. / Estado Actual: Este abrevadero cuenta con un pavimento de roca que rodea su perímetro. Aunque no se tiene certeza sobre la fecha exacta de colocación de este pavimento, su presencia sugiere una posible adaptación para mejorar el acceso y proteger la estructura de la erosión. A pesar de la falta de datos sobre su origen, el pavimento parece en buenas condiciones. / Pozo (ID 7.2) / Descripción Original: Un pozo de 4,70 metros de profundidad y 1 metro de diámetro, utilizado para extraer agua que se distribuía mediante las cañerías hacia el estanque y los abrevaderos. / Estado Actual: El pozo sigue en uso y está protegido por una estructura de piedra, construida alrededor para evitar la contaminación del agua y brindar seguridad en su acceso, tal como se muestra en la imagen adjunta. / Estructuras que ya no existen / Molino de Viento (ID 7.1) / Descripción: Un molino de viento de 9,50 metros de altura y 2 metros en la base, construido sobre una fundación de piedra y cemento. Su rueda tenía un diámetro de 6 pies y el cilindro medía 0,40 metros de longitud y 0,25 metros de circunferencia exterior. / Estado Actual: Esta estructura ya no existe en el lugar, quedan restos de las fundaciones. / Cañerías de Descarga (ID 7.3 y ID 7.5) / Descripción Original: / Cañería 7.3: Tubería de 17,20 metros de longitud y 3/4 pulgadas de diámetro que transportaba agua del molino al estanque. / Cañería 7.5: Tubería de 4,60 metros de longitud y 3/4 pulgadas de diámetro, utilizada para llevar agua entre los abrevaderos. / Estado Actual: Ambas tuberías han desaparecido y ya no se encuentran en el sitio.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-7.3",
+        "nombre": "Cañeria de descarga",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación cañeria de descarga del molino al estanque de 3/4\" diámetro de 17,20 m de long,",
+        "material": null,
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-7.4",
+        "nombre": "Estanque",
+        "anio": null,
+        "tipo": "Estanque",
+        "tenencia": "Administrador",
+        "resumen": "El sitio de Muku Roa fue un complejo de infraestructura diseñado para la recolección, almacenamiento y distribución de agua, impulsado por un molino de viento. Las instalaciones aquí presentes originalmente incluían un molino de viento, un pozo, varios tramos de tuberías de descarga, un estanque y dos abrevaderos. Este sistema facilitaba el suministro de agua, principalmente para el ganado en la zona, usando los abrevaderos anexos al estanque como puntos de acceso. / Estructuras Existentes y Estado Actual / Estanque de Agua (ID 7.4) / Descripción Original: Un estanque de piedra y cemento de 3.20 metros de largo, 3.20 metros de ancho y 1.90 metros de alto, diseñado para almacenar agua y abastecer los abrevaderos anexos. / Estado Actual: El estanque ya no se utiliza para el almacenamiento de agua. Aunque su estructura permanece en buen estado, actualmente no cumple con su función original y ha sido dejado sin uso. / Abrevadero Oeste (ID 7.6) / Descripción Original: Un abrevadero de piedra y cemento de 14,50 metros de largo, 0,70 metros de ancho y 0,20 metros de alto, anexo al estanque y utilizado para abastecer de agua al ganado. / Estado Actual: Este abrevadero se utiliza ocasionalmente. Su estructura permanece en buenas condiciones, lo cual permite su uso intermitente en la actualidad. / Abrevadero Este (ID 7.7) / Descripción Original: Un abrevadero de piedra y cemento de 10,60 metros de largo, 0,65 metros de ancho y 0,20 metros de alto, ubicado al este del estanque. / Estado Actual: Este abrevadero cuenta con un pavimento de roca que rodea su perímetro. Aunque no se tiene certeza sobre la fecha exacta de colocación de este pavimento, su presencia sugiere una posible adaptación para mejorar el acceso y proteger la estructura de la erosión. A pesar de la falta de datos sobre su origen, el pavimento parece en buenas condiciones. / Pozo (ID 7.2) / Descripción Original: Un pozo de 4,70 metros de profundidad y 1 metro de diámetro, utilizado para extraer agua que se distribuía mediante las cañerías hacia el estanque y los abrevaderos. / Estado Actual: El pozo sigue en uso y está protegido por una estructura de piedra, construida alrededor para evitar la contaminación del agua y brindar seguridad en su acceso, tal como se muestra en la imagen adjunta. / Estructuras que ya no existen / Molino de Viento (ID 7.1) / Descripción: Un molino de viento de 9,50 metros de altura y 2 metros en la base, construido sobre una fundación de piedra y cemento. Su rueda tenía un diámetro de 6 pies y el cilindro medía 0,40 metros de longitud y 0,25 metros de circunferencia exterior. / Estado Actual: Esta estructura ya no existe en el lugar, quedan restos de las fundaciones. / Cañerías de Descarga (ID 7.3 y ID 7.5) / Descripción Original: / Cañería 7.3: Tubería de 17,20 metros de longitud y 3/4 pulgadas de diámetro que transportaba agua del molino al estanque. / Cañería 7.5: Tubería de 4,60 metros de longitud y 3/4 pulgadas de diámetro, utilizada para llevar agua entre los abrevaderos. / Estado Actual: Ambas tuberías han desaparecido y ya no se encuentran en el sitio.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-7.5",
+        "nombre": "Cañeria 2",
+        "anio": null,
+        "tipo": "Pozo / Estanque / Abrevadero / Abrevadero",
+        "tenencia": "Administrador",
+        "resumen": "El sitio de Muku Roa fue un complejo de infraestructura diseñado para la recolección, almacenamiento y distribución de agua, impulsado por un molino de viento. Las instalaciones aquí presentes originalmente incluían un molino de viento, un pozo, varios tramos de tuberías de descarga, un estanque y dos abrevaderos. Este sistema facilitaba el suministro de agua, principalmente para el ganado en la zona, usando los abrevaderos anexos al estanque como puntos de acceso. / Estructuras Existentes y Estado Actual / Estanque de Agua (ID 7.4) / Descripción Original: Un estanque de piedra y cemento de 3.20 metros de largo, 3.20 metros de ancho y 1.90 metros de alto, diseñado para almacenar agua y abastecer los abrevaderos anexos. / Estado Actual: El estanque ya no se utiliza para el almacenamiento de agua. Aunque su estructura permanece en buen estado, actualmente no cumple con su función original y ha sido dejado sin uso. / Abrevadero Oeste (ID 7.6) / Descripción Original: Un abrevadero de piedra y cemento de 14,50 metros de largo, 0,70 metros de ancho y 0,20 metros de alto, anexo al estanque y utilizado para abastecer de agua al ganado. / Estado Actual: Este abrevadero se utiliza ocasionalmente. Su estructura permanece en buenas condiciones, lo cual permite su uso intermitente en la actualidad. / Abrevadero Este (ID 7.7) / Descripción Original: Un abrevadero de piedra y cemento de 10,60 metros de largo, 0,65 metros de ancho y 0,20 metros de alto, ubicado al este del estanque. / Estado Actual: Este abrevadero cuenta con un pavimento de roca que rodea su perímetro. Aunque no se tiene certeza sobre la fecha exacta de colocación de este pavimento, su presencia sugiere una posible adaptación para mejorar el acceso y proteger la estructura de la erosión. A pesar de la falta de datos sobre su origen, el pavimento parece en buenas condiciones. / Pozo (ID 7.2) / Descripción Original: Un pozo de 4,70 metros de profundidad y 1 metro de diámetro, utilizado para extraer agua que se distribuía mediante las cañerías hacia el estanque y los abrevaderos. / Estado Actual: El pozo sigue en uso y está protegido por una estructura de piedra, construida alrededor para evitar la contaminación del agua y brindar seguridad en su acceso, tal como se muestra en la imagen adjunta. / Estructuras que ya no existen / Molino de Viento (ID 7.1) / Descripción: Un molino de viento de 9,50 metros de altura y 2 metros en la base, construido sobre una fundación de piedra y cemento. Su rueda tenía un diámetro de 6 pies y el cilindro medía 0,40 metros de longitud y 0,25 metros de circunferencia exterior. / Estado Actual: Esta estructura ya no existe en el lugar, quedan restos de las fundaciones. / Cañerías de Descarga (ID 7.3 y ID 7.5) / Descripción Original: / Cañería 7.3: Tubería de 17,20 metros de longitud y 3/4 pulgadas de diámetro que transportaba agua del molino al estanque. / Cañería 7.5: Tubería de 4,60 metros de longitud y 3/4 pulgadas de diámetro, utilizada para llevar agua entre los abrevaderos. / Estado Actual: Ambas tuberías han desaparecido y ya no se encuentran en el sitio.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-7.6",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": "Abrevadero",
+        "tenencia": "Administrador",
+        "resumen": "El sitio de Muku Roa fue un complejo de infraestructura diseñado para la recolección, almacenamiento y distribución de agua, impulsado por un molino de viento. Las instalaciones aquí presentes originalmente incluían un molino de viento, un pozo, varios tramos de tuberías de descarga, un estanque y dos abrevaderos. Este sistema facilitaba el suministro de agua, principalmente para el ganado en la zona, usando los abrevaderos anexos al estanque como puntos de acceso. / Estructuras Existentes y Estado Actual / Estanque de Agua (ID 7.4) / Descripción Original: Un estanque de piedra y cemento de 3.20 metros de largo, 3.20 metros de ancho y 1.90 metros de alto, diseñado para almacenar agua y abastecer los abrevaderos anexos. / Estado Actual: El estanque ya no se utiliza para el almacenamiento de agua. Aunque su estructura permanece en buen estado, actualmente no cumple con su función original y ha sido dejado sin uso. / Abrevadero Oeste (ID 7.6) / Descripción Original: Un abrevadero de piedra y cemento de 14,50 metros de largo, 0,70 metros de ancho y 0,20 metros de alto, anexo al estanque y utilizado para abastecer de agua al ganado. / Estado Actual: Este abrevadero se utiliza ocasionalmente. Su estructura permanece en buenas condiciones, lo cual permite su uso intermitente en la actualidad. / Abrevadero Este (ID 7.7) / Descripción Original: Un abrevadero de piedra y cemento de 10,60 metros de largo, 0,65 metros de ancho y 0,20 metros de alto, ubicado al este del estanque. / Estado Actual: Este abrevadero cuenta con un pavimento de roca que rodea su perímetro. Aunque no se tiene certeza sobre la fecha exacta de colocación de este pavimento, su presencia sugiere una posible adaptación para mejorar el acceso y proteger la estructura de la erosión. A pesar de la falta de datos sobre su origen, el pavimento parece en buenas condiciones. / Pozo (ID 7.2) / Descripción Original: Un pozo de 4,70 metros de profundidad y 1 metro de diámetro, utilizado para extraer agua que se distribuía mediante las cañerías hacia el estanque y los abrevaderos. / Estado Actual: El pozo sigue en uso y está protegido por una estructura de piedra, construida alrededor para evitar la contaminación del agua y brindar seguridad en su acceso, tal como se muestra en la imagen adjunta. / Estructuras que ya no existen / Molino de Viento (ID 7.1) / Descripción: Un molino de viento de 9,50 metros de altura y 2 metros en la base, construido sobre una fundación de piedra y cemento. Su rueda tenía un diámetro de 6 pies y el cilindro medía 0,40 metros de longitud y 0,25 metros de circunferencia exterior. / Estado Actual: Esta estructura ya no existe en el lugar, quedan restos de las fundaciones. / Cañerías de Descarga (ID 7.3 y ID 7.5) / Descripción Original: / Cañería 7.3: Tubería de 17,20 metros de longitud y 3/4 pulgadas de diámetro que transportaba agua del molino al estanque. / Cañería 7.5: Tubería de 4,60 metros de longitud y 3/4 pulgadas de diámetro, utilizada para llevar agua entre los abrevaderos. / Estado Actual: Ambas tuberías han desaparecido y ya no se encuentran en el sitio.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-7.7",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": "Abrevadero",
+        "tenencia": "Administrador",
+        "resumen": "El sitio de Muku Roa fue un complejo de infraestructura diseñado para la recolección, almacenamiento y distribución de agua, impulsado por un molino de viento. Las instalaciones aquí presentes originalmente incluían un molino de viento, un pozo, varios tramos de tuberías de descarga, un estanque y dos abrevaderos. Este sistema facilitaba el suministro de agua, principalmente para el ganado en la zona, usando los abrevaderos anexos al estanque como puntos de acceso. / Estructuras Existentes y Estado Actual / Estanque de Agua (ID 7.4) / Descripción Original: Un estanque de piedra y cemento de 3.20 metros de largo, 3.20 metros de ancho y 1.90 metros de alto, diseñado para almacenar agua y abastecer los abrevaderos anexos. / Estado Actual: El estanque ya no se utiliza para el almacenamiento de agua. Aunque su estructura permanece en buen estado, actualmente no cumple con su función original y ha sido dejado sin uso. / Abrevadero Oeste (ID 7.6) / Descripción Original: Un abrevadero de piedra y cemento de 14,50 metros de largo, 0,70 metros de ancho y 0,20 metros de alto, anexo al estanque y utilizado para abastecer de agua al ganado. / Estado Actual: Este abrevadero se utiliza ocasionalmente. Su estructura permanece en buenas condiciones, lo cual permite su uso intermitente en la actualidad. / Abrevadero Este (ID 7.7) / Descripción Original: Un abrevadero de piedra y cemento de 10,60 metros de largo, 0,65 metros de ancho y 0,20 metros de alto, ubicado al este del estanque. / Estado Actual: Este abrevadero cuenta con un pavimento de roca que rodea su perímetro. Aunque no se tiene certeza sobre la fecha exacta de colocación de este pavimento, su presencia sugiere una posible adaptación para mejorar el acceso y proteger la estructura de la erosión. A pesar de la falta de datos sobre su origen, el pavimento parece en buenas condiciones. / Pozo (ID 7.2) / Descripción Original: Un pozo de 4,70 metros de profundidad y 1 metro de diámetro, utilizado para extraer agua que se distribuía mediante las cañerías hacia el estanque y los abrevaderos. / Estado Actual: El pozo sigue en uso y está protegido por una estructura de piedra, construida alrededor para evitar la contaminación del agua y brindar seguridad en su acceso, tal como se muestra en la imagen adjunta. / Estructuras que ya no existen / Molino de Viento (ID 7.1) / Descripción: Un molino de viento de 9,50 metros de altura y 2 metros en la base, construido sobre una fundación de piedra y cemento. Su rueda tenía un diámetro de 6 pies y el cilindro medía 0,40 metros de longitud y 0,25 metros de circunferencia exterior. / Estado Actual: Esta estructura ya no existe en el lugar, quedan restos de las fundaciones. / Cañerías de Descarga (ID 7.3 y ID 7.5) / Descripción Original: / Cañería 7.3: Tubería de 17,20 metros de longitud y 3/4 pulgadas de diámetro que transportaba agua del molino al estanque. / Cañería 7.5: Tubería de 4,60 metros de longitud y 3/4 pulgadas de diámetro, utilizada para llevar agua entre los abrevaderos. / Estado Actual: Ambas tuberías han desaparecido y ya no se encuentran en el sitio.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      }
+    ],
+    "BC-Z8": [
+      {
+        "id": "BC-8.1",
+        "nombre": "Molino",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un Molino de viento para agua en Ovahe, montado en torres cónicas cuadrangulares de varillas de madera, de 7.80 metros de altura y 1.90 metros en la base, montadas en fundación de piedra y cemento. Diámetro de la rueda de viento 6 pies. Cilindro de 0.55 metros de longitud y 0.35 metros de circunferencia exterior.",
+        "material": "Madera",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-8.2",
+        "nombre": "Pozo",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Pozo de 4.50 metros de profundidad y 0.60 metros de diámetro.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-8.3",
+        "nombre": "Cañeria de descarga",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación de cañeria de descarga del molino al estanque de 3/4\" de diametro, 35 m de longitud.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-8.4",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un estanque de piedra y cemento de 3.50 metros de largo, 3.30 metros de ancho y 1.85 metros de alto, para el almacenamiento del agua del molino y para surtir los abrevaderos anexos",
+        "material": "Piedra y cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-8.5",
+        "nombre": "Cañeria 2",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación de cañeria de  1\" de diametro, 8,10 m de longitud para surtir agua al abrevaderos anexos.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-8.6",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una abrevadero de piedra y cemento, situado al oeste del estanque de 10,55 m de largo, 0,75 m de ancho y 0,2 alto.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-8.7",
+        "nombre": "Cañeria 2",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación de cañeria de  1\" de diametro, 6,60 m de longitud para surtir agua de un abrevadero a otro.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-8.8",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una abrevadero de piedra y cemento, situado al este del estanque de 3,5 m de largo, 0,53 m de ancho y 0,2 alto.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-8.9",
+        "nombre": "Cañeria 2",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una instalación de cañeria de  3/4\" de diametro, 305 m de longitud desde el volcán Rano raraku al abrevadero.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-8.10",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Una abrevadero de piedra y cemento, de 13,50 m de largo, 0,70 m de ancho y 0,2 alto.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      }
+    ],
+    "BC-Z9": [
+      {
+        "id": "BC-9.1",
+        "nombre": "Molino",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un Molino de viento para agua en Hanga Oteo, montado en torres cónicas cuadrangulares de varillas de fierro, de 12.10 metros de altura y 2.55 metros de base, montadas en fundación de piedra y cemento. Diámetro de la rueda de viento 6 pies. Cilindro de 0.50 metros de longitud y 0.25 metros de circunferencia exterior.",
+        "material": "Fierro",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-9.2",
+        "nombre": "Pozo",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Pozo de 5.15 metros de profundidad y 1 metros de diámetro.",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-9.3",
+        "nombre": "Cañeria de descarga",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "No se señala en informe",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-9.4",
+        "nombre": "Estanque",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un estanque de piedra y cemento de 3.50 metros de largo, 2 metros de ancho y  1.70 metros de alto, para el almacenamiento del agua del molino y para surtir los abrevaderos anexos.",
+        "material": "Piedra y cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-9.5",
+        "nombre": "Cañeria 2",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "No se señala en informe",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-9.6",
+        "nombre": "Abrevadero",
+        "anio": 1953,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "Un abrevadero de agua, de piedra y cemento, situado al  Norte del Molino de Hanga Oteo, de 3.60 metros de largo, 0.60 metros de ancho y 0.20 metros de alto.",
+        "material": "Piedra y cemento",
+        "estado": "Regular",
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-9.7",
+        "nombre": "Cañeria",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "No se señala en informe",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-9.8",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": null,
+        "tenencia": null,
+        "resumen": "No se señala en informe",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-9.9",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": "Abrevadero",
+        "tenencia": null,
+        "resumen": "Recuperado de ZCH09_BC.docx: ICH-BC_9.9    Abrevadero",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      },
+      {
+        "id": "BC-9.10",
+        "nombre": "Abrevadero",
+        "anio": null,
+        "tipo": "Abrevadero",
+        "tenencia": null,
+        "resumen": "Recuperado de ZCH09_BC.docx: ICH-BC_9.10    Abrevadero",
+        "material": null,
+        "estado": null,
+        "url_ficha_pdf": null
+      }
+    ]
+  }
+}

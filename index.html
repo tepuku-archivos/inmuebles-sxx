@@ -1,1057 +1,195 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inventario de inmuebles del siglo XX en Rapa Nui — Tepuku</title>
-<meta name="description" content="Archivo digital de inmuebles construidos en Rapa Nui durante el siglo XX. Proyecto del Centro de Investigaciones Aplicadas Tepuku.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<style>
-  :root{
-    --crema:#f5ead8;
-    --crema-claro:#fbf5e8;
-    --crema-oscuro:#ebe0c4;
-    --rojo:#8B1A1A;
-    --rojo-oscuro:#6a1414;
-    --texto:#2a1f14;
-    --texto-suave:#5a4a35;
-    --borde:rgba(42,31,20,0.15);
-    --borde-fuerte:rgba(42,31,20,0.3);
-    --serif:'EB Garamond', Georgia, serif;
-    --conden:'Barlow Condensed', 'Arial Narrow', sans-serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:var(--serif);
-    font-size:18px;
-    line-height:1.6;
-    color:var(--texto);
-    background:var(--crema);
-  }
-  nav{
-    position:sticky;top:0;z-index:1000;
-    background:var(--crema);
-    border-bottom:1px solid var(--borde);
-    padding:14px 32px;
-    display:flex;justify-content:space-between;align-items:center;
-  }
-  .nav-marca{
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    font-weight:500;
-    font-size:14px;
-    color:var(--texto);
-  }
-  .nav-marca strong{color:var(--rojo);font-weight:600}
-  .nav-menu{display:flex;gap:28px;list-style:none}
-  .nav-menu a{
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.06em;
-    font-size:13px;
-    color:var(--texto);
-    text-decoration:none;
-    padding:6px 0;
-    border-bottom:2px solid transparent;
-    transition:border-color 0.2s;
-  }
-  .nav-menu a:hover, .nav-menu a.activa{border-color:var(--rojo)}
-  .hero{
-    padding:80px 32px 100px;
-    max-width:1280px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:60px;
-    align-items:center;
-  }
-  .hero-kicker{
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.15em;
-    font-size:13px;
-    color:var(--rojo);
-    font-weight:500;
-    margin-bottom:20px;
-  }
-  .hero h1{
-    font-family:var(--serif);
-    font-size:56px;
-    line-height:1.1;
-    font-weight:500;
-    letter-spacing:-0.01em;
-    margin-bottom:24px;
-  }
-  .hero h1 em{color:var(--rojo);font-style:italic;font-weight:400}
-  .hero p{
-    font-size:19px;
-    color:var(--texto-suave);
-    margin-bottom:36px;
-    max-width:520px;
-  }
-  .hero-buscador{
-    background:var(--crema-claro);
-    border:1px solid var(--borde);
-    padding:24px;
-    border-radius:2px;
-  }
-  .hero-buscador label{
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    font-size:12px;
-    color:var(--texto-suave);
-    display:block;
-    margin-bottom:10px;
-  }
-  .hero-buscador input{
-    width:100%;
-    padding:12px 16px;
-    font-family:var(--serif);
-    font-size:17px;
-    background:white;
-    border:1px solid var(--borde);
-    color:var(--texto);
-    border-radius:2px;
-    outline:none;
-  }
-  .hero-buscador input:focus{border-color:var(--rojo)}
-  .resultados{
-    margin-top:14px;
-    max-height:240px;
-    overflow-y:auto;
-  }
-  .resultado-item{
-    padding:10px 12px;
-    border-bottom:1px solid var(--borde);
-    cursor:pointer;
-    font-size:15px;
-    transition:background 0.15s;
-  }
-  .resultado-item:hover{background:var(--crema)}
-  .resultado-item:last-child{border-bottom:none}
-  .resultado-meta{
-    font-family:var(--conden);
-    font-size:12px;
-    color:var(--rojo);
-    text-transform:uppercase;
-    letter-spacing:0.06em;
-    margin-top:2px;
-  }
-  .btn{
-    display:inline-block;
-    padding:14px 28px;
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    font-size:14px;
-    font-weight:500;
-    text-decoration:none;
-    border:1px solid var(--rojo);
-    border-radius:2px;
-    transition:all 0.2s;
-    cursor:pointer;
-  }
-  .btn-primary{background:var(--rojo);color:var(--crema)}
-  .btn-primary:hover{background:var(--rojo-oscuro)}
-  .btn-secondary{background:transparent;color:var(--rojo)}
-  .btn-secondary:hover{background:var(--rojo);color:var(--crema)}
-  .hero-botones{display:flex;gap:14px;flex-wrap:wrap}
-  section{padding:80px 32px;border-top:1px solid var(--borde)}
-  .seccion-cont{max-width:1280px;margin:0 auto}
-  .seccion-titulo{margin-bottom:48px}
-  .seccion-kicker{
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.15em;
-    font-size:13px;
-    color:var(--rojo);
-    font-weight:500;
-    margin-bottom:14px;
-  }
-  .seccion-titulo h2{
-    font-family:var(--serif);
-    font-size:42px;
-    line-height:1.15;
-    font-weight:500;
-    letter-spacing:-0.01em;
-    margin-bottom:18px;
-  }
-  .seccion-titulo p{
-    font-size:18px;
-    color:var(--texto-suave);
-    max-width:680px;
-  }
-  /* mapa con sidebar tipo IFYR */
-  .mapa-layout{
-    display:grid;
-    grid-template-columns:320px 1fr 380px;
-    gap:0;
-    height:640px;
-    border:1px solid var(--borde);
-    border-radius:2px;
-    overflow:hidden;
-    background:var(--crema-claro);
-  }
-  .mapa-lista{
-    background:var(--crema-claro);
-    border-right:1px solid var(--borde);
-    overflow-y:auto;
-    padding:0;
-  }
-  .lista-cabecera{
-    padding:20px;
-    background:var(--crema);
-    border-bottom:1px solid var(--borde);
-    position:sticky;
-    top:0;
-    z-index:5;
-  }
-  .lista-cabecera h3{
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.1em;
-    font-size:13px;
-    font-weight:500;
-    color:var(--texto-suave);
-  }
-  .lista-cabecera .contador{color:var(--rojo);font-weight:600}
-  .filtros{
-    padding:16px 20px;
-    background:var(--crema);
-    border-bottom:1px solid var(--borde);
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
-  }
-  .filtro-btn{
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.06em;
-    font-size:11px;
-    font-weight:500;
-    padding:5px 10px;
-    border:1px solid var(--borde-fuerte);
-    background:transparent;
-    color:var(--texto-suave);
-    cursor:pointer;
-    border-radius:2px;
-    transition:all 0.15s;
-  }
-  .filtro-btn:hover{border-color:var(--rojo);color:var(--rojo)}
-  .filtro-btn.activo{background:var(--rojo);color:var(--crema);border-color:var(--rojo)}
-  .item-inmueble{
-    padding:16px 20px;
-    border-bottom:1px solid var(--borde);
-    cursor:pointer;
-    transition:background 0.15s;
-  }
-  .item-inmueble:hover{background:var(--crema)}
-  .item-inmueble.seleccionado{background:var(--crema-oscuro);border-left:3px solid var(--rojo)}
-  .item-id{
-    font-family:var(--conden);
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    color:var(--rojo);
-    margin-bottom:4px;
-  }
-  .item-nombre{
-    font-family:var(--serif);
-    font-size:16px;
-    font-weight:500;
-    line-height:1.3;
-    margin-bottom:4px;
-  }
-  .item-meta{
-    font-family:var(--conden);
-    font-size:12px;
-    color:var(--texto-suave);
-    text-transform:uppercase;
-    letter-spacing:0.04em;
-  }
-  #mapa-principal{height:100%;width:100%}
-  .ficha-lateral{
-    background:white;
-    border-left:1px solid var(--borde);
-    overflow-y:auto;
-    padding:0;
-    display:flex;
-    flex-direction:column;
-  }
-  .ficha-vacia{
-    flex:1;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:40px;
-    text-align:center;
-    color:var(--texto-suave);
-    font-size:15px;
-    font-style:italic;
-  }
-  .ficha-contenido{display:none;flex-direction:column}
-  .ficha-contenido.visible{display:flex}
-  .ficha-imagen{
-    height:180px;
-    background:var(--crema-oscuro);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:var(--texto-suave);
-    font-family:var(--conden);
-    font-size:13px;
-    text-transform:uppercase;
-    letter-spacing:0.1em;
-    border-bottom:1px solid var(--borde);
-  }
-  .ficha-cabecera{
-    padding:24px;
-    border-bottom:1px solid var(--borde);
-  }
-  .ficha-id{
-    font-family:var(--conden);
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.1em;
-    color:var(--rojo);
-    margin-bottom:8px;
-    font-weight:500;
-  }
-  .ficha-titulo{
-    font-family:var(--serif);
-    font-size:24px;
-    line-height:1.2;
-    font-weight:500;
-    margin-bottom:6px;
-  }
-  .ficha-subtitulo{
-    font-family:var(--conden);
-    font-size:14px;
-    color:var(--texto-suave);
-    text-transform:uppercase;
-    letter-spacing:0.06em;
-  }
-  .ficha-datos{
-    padding:20px 24px;
-    border-bottom:1px solid var(--borde);
-  }
-  .dato{margin-bottom:14px}
-  .dato:last-child{margin-bottom:0}
-  .dato-label{
-    font-family:var(--conden);
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    color:var(--texto-suave);
-    margin-bottom:3px;
-  }
-  .dato-valor{
-    font-family:var(--serif);
-    font-size:15px;
-    color:var(--texto);
-    line-height:1.4;
-  }
-  .ficha-descripcion{
-    padding:20px 24px;
-    border-bottom:1px solid var(--borde);
-    font-size:15px;
-    color:var(--texto-suave);
-    line-height:1.6;
-  }
-  .ficha-acciones{
-    padding:20px 24px;
-    margin-top:auto;
-  }
-  .btn-ficha{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    width:100%;
-    padding:14px 18px;
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    font-size:13px;
-    font-weight:500;
-    background:var(--rojo);
-    color:var(--crema);
-    border:none;
-    border-radius:2px;
-    cursor:pointer;
-    text-decoration:none;
-    transition:background 0.2s;
-  }
-  .btn-ficha:hover{background:var(--rojo-oscuro)}
-  .btn-ficha::after{content:'→';font-size:18px;font-family:var(--serif)}
-  /* leyenda */
-  .mapa-leyenda{
-    margin-top:16px;
-    display:flex;
-    gap:32px;
-    align-items:center;
-    font-family:var(--conden);
-    font-size:13px;
-    color:var(--texto-suave);
-    flex-wrap:wrap;
-  }
-  .leyenda-item{display:flex;align-items:center;gap:10px}
-  .leyenda-punto{
-    width:14px;height:14px;
-    border-radius:50%;
-    border:2px solid white;
-    box-shadow:0 0 0 1px rgba(0,0,0,0.2);
-  }
-  /* proyectos */
-  .proyectos-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:32px;
-  }
-  .proyecto-card{
-    background:var(--crema-claro);
-    border:1px solid var(--borde);
-    border-radius:2px;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    transition:border-color 0.2s, transform 0.2s;
-  }
-  .proyecto-card:hover{border-color:var(--rojo);transform:translateY(-2px)}
-  .proyecto-card.inactivo{opacity:0.55}
-  .proyecto-img{
-    height:180px;
-    background:var(--rojo);
-    display:flex;align-items:center;justify-content:center;
-    color:var(--crema);
-    font-family:var(--conden);
-    font-size:14px;
-    text-transform:uppercase;
-    letter-spacing:0.1em;
-  }
-  .proyecto-img.bc{background:#BA7517}
-  .proyecto-img.fut{background:#5F5E5A}
-  .proyecto-info{padding:24px;flex:1;display:flex;flex-direction:column}
-  .proyecto-meta{
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    font-size:12px;
-    color:var(--rojo);
-    margin-bottom:10px;
-    display:flex;
-    justify-content:space-between;
-  }
-  .proyecto-meta .estado{color:var(--texto-suave)}
-  .proyecto-info h3{
-    font-family:var(--serif);
-    font-size:24px;
-    line-height:1.2;
-    font-weight:500;
-    margin-bottom:14px;
-  }
-  .proyecto-info p{
-    font-size:15px;
-    color:var(--texto-suave);
-    margin-bottom:20px;
-    flex:1;
-  }
-  .proyecto-stats{
-    display:flex;
-    gap:18px;
-    margin-bottom:18px;
-    padding-top:14px;
-    border-top:1px solid var(--borde);
-  }
-  .stat{font-family:var(--conden)}
-  .stat-num{
-    display:block;
-    font-size:24px;
-    color:var(--rojo);
-    font-weight:500;
-    line-height:1;
-  }
-  .stat-label{
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    color:var(--texto-suave);
-    margin-top:4px;
-  }
-  .proyecto-link{
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    font-size:13px;
-    font-weight:500;
-    color:var(--rojo);
-    text-decoration:none;
-    border-top:1px solid var(--borde);
-    padding-top:16px;
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-  }
-  .proyecto-link:hover{color:var(--rojo-oscuro)}
-  .proyecto-link.disabled{color:var(--texto-suave);cursor:not-allowed}
-  /* relato */
-  .relato-cont{display:grid;grid-template-columns:1fr 2fr;gap:60px}
-  .relato-intro{position:sticky;top:100px;align-self:start}
-  .timeline{border-left:1px solid var(--borde-fuerte);padding-left:32px}
-  .hito{margin-bottom:42px;position:relative}
-  .hito::before{
-    content:'';
-    position:absolute;
-    left:-39px;
-    top:8px;
-    width:14px;height:14px;
-    background:var(--rojo);
-    border-radius:50%;
-    border:3px solid var(--crema);
-  }
-  .hito-año{
-    font-family:var(--conden);
-    font-size:32px;
-    font-weight:500;
-    color:var(--rojo);
-    line-height:1;
-    margin-bottom:8px;
-  }
-  .hito h4{
-    font-family:var(--serif);
-    font-size:22px;
-    font-weight:500;
-    margin-bottom:8px;
-  }
-  .hito p{font-size:16px;color:var(--texto-suave)}
-  /* equipo */
-  .equipo-cont{
-    background:var(--crema-claro);
-    border:1px solid var(--borde);
-    padding:48px;
-    border-radius:2px;
-  }
-  .equipo-cont h3{
-    font-family:var(--serif);
-    font-size:28px;
-    font-weight:500;
-    margin-bottom:20px;
-    color:var(--rojo);
-  }
-  .equipo-cont p{
-    font-size:17px;
-    color:var(--texto-suave);
-    margin-bottom:18px;
-    max-width:780px;
-  }
-  .equipo-detalles{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:32px;
-    margin-top:36px;
-    padding-top:32px;
-    border-top:1px solid var(--borde);
-  }
-  .detalle h4{
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.1em;
-    font-size:12px;
-    color:var(--rojo);
-    margin-bottom:8px;
-    font-weight:500;
-  }
-  .detalle p{
-    font-size:15px;
-    color:var(--texto);
-    margin:0;
-  }
-  /* footer */
-  footer{
-    background:var(--rojo);
-    color:var(--crema);
-    padding:48px 32px 32px;
-  }
-  .footer-cont{
-    max-width:1280px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:40px;
-  }
-  footer h4{
-    font-family:var(--conden);
-    text-transform:uppercase;
-    letter-spacing:0.1em;
-    font-size:13px;
-    margin-bottom:14px;
-    opacity:0.85;
-  }
-  footer p, footer a{
-    font-size:15px;
-    color:var(--crema);
-    text-decoration:none;
-    line-height:1.6;
-  }
-  footer a:hover{text-decoration:underline}
-  footer ul{list-style:none}
-  footer li{margin-bottom:6px}
-  .footer-bottom{
-    max-width:1280px;
-    margin:32px auto 0;
-    padding-top:24px;
-    border-top:1px solid rgba(245,234,216,0.2);
-    display:flex;
-    justify-content:space-between;
-    font-family:var(--conden);
-    font-size:12px;
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    opacity:0.8;
-    flex-wrap:wrap;
-    gap:12px;
-  }
-  /* leaflet popup custom */
-  .leaflet-popup-content-wrapper{
-    background:var(--crema-claro);
-    border-radius:2px;
-    border:1px solid var(--rojo);
-  }
-  .leaflet-popup-content{margin:14px 18px;font-family:var(--serif)}
-  .leaflet-popup-tip{background:var(--rojo)}
-  .popup-id{
-    font-family:var(--conden);
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    color:var(--rojo);
-    margin-bottom:4px;
-  }
-  .popup-nombre{
-    font-family:var(--serif);
-    font-size:17px;
-    font-weight:500;
-    line-height:1.2;
-    margin-bottom:6px;
-  }
-  .popup-meta{
-    font-family:var(--conden);
-    font-size:12px;
-    color:var(--texto-suave);
-    text-transform:uppercase;
-    letter-spacing:0.04em;
-  }
-  /* responsive */
-  @media (max-width: 1100px){
-    .mapa-layout{grid-template-columns:280px 1fr;height:600px}
-    .ficha-lateral{
-      position:fixed;top:0;right:0;bottom:0;
-      width:380px;
-      max-width:90vw;
-      z-index:1500;
-      border-left:1px solid var(--borde);
-      transform:translateX(100%);
-      transition:transform 0.3s;
-      box-shadow:-4px 0 20px rgba(0,0,0,0.15);
-    }
-    .ficha-lateral.abierta{transform:translateX(0)}
-    .ficha-cerrar{
-      display:block !important;
-      position:absolute;
-      top:12px;right:12px;
-      width:32px;height:32px;
-      background:white;
-      border:1px solid var(--borde);
-      border-radius:50%;
-      font-size:18px;
-      cursor:pointer;
-      z-index:10;
-    }
-  }
-  .ficha-cerrar{display:none;font-family:var(--serif)}
-  @media (max-width: 900px){
-    .hero{grid-template-columns:1fr;padding:48px 24px 60px;gap:40px}
-    .hero h1{font-size:40px}
-    .proyectos-grid{grid-template-columns:1fr}
-    .relato-cont, .equipo-detalles{grid-template-columns:1fr}
-    .footer-cont{grid-template-columns:1fr}
-    .nav-menu{display:none}
-    section{padding:48px 24px}
-    .seccion-titulo h2{font-size:32px}
-    .mapa-layout{grid-template-columns:1fr;height:auto}
-    .mapa-lista{max-height:300px}
-    #mapa-principal{height:400px}
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inmuebles sXX · Inventario del siglo XX en Rapa Nui</title>
+  <meta name="description" content="Inventario público de inmuebles fiscales, religiosos e industriales del siglo XX en Rapa Nui. Hub de proyectos patrimoniales de Tepuku, periodo histórico 1900-1965.">
+
+  <meta property="og:title" content="Inmuebles sXX · Rapa Nui">
+  <meta property="og:description" content="Inmuebles fiscales, religiosos e industriales del siglo XX en Rapa Nui.">
+  <meta property="og:url" content="https://inmuebles-sxx.tepuku.org">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="canonical" href="https://inmuebles-sxx.tepuku.org/">
 </head>
 <body>
 
-<nav>
-  <div class="nav-marca"><strong>Tepuku</strong> · Inmuebles sXX</div>
-  <ul class="nav-menu">
-    <li><a href="#mapa-sec">Mapa</a></li>
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#relato">Relato</a></li>
-    <li><a href="#equipo">Equipo</a></li>
-  </ul>
-</nav>
-
-<header class="hero">
-  <div>
-    <div class="hero-kicker">Patrimonio construido · 1888 — 1966</div>
-    <h1>Inventario de inmuebles del <em>siglo XX</em> en Rapa Nui</h1>
-    <p>Archivo digital de proyectos de investigación sobre inmuebles fiscales, religiosos e industriales construidos en Rapa Nui durante el siglo XX. Acceso a fichas técnicas, planos, fotografías históricas y narrativas por proyecto.</p>
-    <div class="hero-botones">
-      <a href="#mapa-sec" class="btn btn-primary">Ver mapa general</a>
-      <a href="#proyectos" class="btn btn-secondary">Explorar proyectos</a>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-imagen">
+      <img src="/img/hanga-roa-1962.jpg" alt="Vista aérea de Hanga Roa, Rapa Nui, 1962">
     </div>
-  </div>
-  <div class="hero-buscador">
-    <label for="buscador">Buscar inmueble</label>
-    <input type="text" id="buscador" placeholder="Por nombre, ID, año..." autocomplete="off">
-    <div class="resultados" id="resultados"></div>
-  </div>
-</header>
-
-<section id="mapa-sec">
-  <div class="seccion-cont">
-    <div class="seccion-titulo">
-      <div class="seccion-kicker">Mapa general</div>
-      <h2>Distribución espacial de los inmuebles documentados</h2>
-      <p>Lista navegable a la izquierda, mapa interactivo al centro, ficha técnica a la derecha. Click en un inmueble para ver su información y enlace al proyecto correspondiente.</p>
-    </div>
-
-    <div class="mapa-layout">
-      <aside class="mapa-lista">
-        <div class="lista-cabecera">
-          <h3><span class="contador" id="contador">9</span> inmuebles registrados</h3>
-        </div>
-        <div class="filtros">
-          <button class="filtro-btn activo" data-filtro="todos">Todos</button>
-          <button class="filtro-btn" data-filtro="IFYR">IFYR</button>
-          <button class="filtro-btn" data-filtro="BC">B. Costero</button>
-        </div>
-        <div id="lista-inmuebles"></div>
-      </aside>
-
-      <div id="mapa-principal"></div>
-
-      <aside class="ficha-lateral" id="ficha">
-        <button class="ficha-cerrar" onclick="cerrarFicha()">×</button>
-        <div class="ficha-vacia" id="ficha-vacia">
-          Selecciona un inmueble del mapa o de la lista para ver su ficha
-        </div>
-        <div class="ficha-contenido" id="ficha-contenido"></div>
-      </aside>
-    </div>
-
-    <div class="mapa-leyenda">
-      <div class="leyenda-item"><span class="leyenda-punto" style="background:#8B1A1A"></span>IFYR — Fiscales y religiosos</div>
-      <div class="leyenda-item"><span class="leyenda-punto" style="background:#BA7517"></span>Borde Costero (próximamente)</div>
-    </div>
-  </div>
-</section>
-
-<section id="proyectos">
-  <div class="seccion-cont">
-    <div class="seccion-titulo">
-      <div class="seccion-kicker">Proyectos publicados</div>
-      <h2>Investigaciones que componen este inventario</h2>
-      <p>Cada proyecto vive en su propio sitio con fichas, documentos y archivos digitalizados. Las tarjetas enlazan al sitio correspondiente.</p>
-    </div>
-    <div class="proyectos-grid">
-      <article class="proyecto-card">
-        <div class="proyecto-img">IFYR</div>
-        <div class="proyecto-info">
-          <div class="proyecto-meta">
-            <span>1942 — 1964</span>
-            <span class="estado">Publicado</span>
-          </div>
-          <h3>Inmuebles fiscales y religiosos de Rapa Nui</h3>
-          <p>Documentación archivística de inmuebles fiscales, religiosos y educativos en Hanga Roa durante el período de administración de la Armada y traspaso a la administración civil.</p>
-          <div class="proyecto-stats">
-            <div class="stat"><span class="stat-num">9</span><span class="stat-label">Inmuebles</span></div>
-            <div class="stat"><span class="stat-num">225</span><span class="stat-label">Archivos</span></div>
-            <div class="stat"><span class="stat-num">40</span><span class="stat-label">Registros</span></div>
-          </div>
-          <a href="https://fiscales-religiosos.tepuku.org" target="_blank" rel="noopener" class="proyecto-link">Ver sitio del proyecto →</a>
-        </div>
-      </article>
-
-      <article class="proyecto-card">
-        <div class="proyecto-img bc">BORDE COSTERO</div>
-        <div class="proyecto-info">
-          <div class="proyecto-meta">
-            <span>1888 — 1964</span>
-            <span class="estado">Publicado</span>
-          </div>
-          <h3>Vestigios del periodo histórico en el borde costero</h3>
-          <p>Cronología constructiva del sector productivo de Haŋa Piko, servicios anexos de la explanada Ahu y sector hidráulico costero del periodo Compañía Explotadora.</p>
-          <div class="proyecto-stats">
-            <div class="stat"><span class="stat-num">3</span><span class="stat-label">Sectores</span></div>
-            <div class="stat"><span class="stat-num">—</span><span class="stat-label">Inmuebles</span></div>
-            <div class="stat"><span class="stat-num">—</span><span class="stat-label">Fases</span></div>
-          </div>
-          <a href="https://storymaps.arcgis.com/stories/9f980fd024cd4f03a6fa28a7ae027804" target="_blank" rel="noopener" class="proyecto-link">Ver relato visual →</a>
-        </div>
-      </article>
-
-      <article class="proyecto-card inactivo">
-        <div class="proyecto-img fut">MATAVERI</div>
-        <div class="proyecto-info">
-          <div class="proyecto-meta">
-            <span>1895 — 1953</span>
-            <span class="estado">En preparación</span>
-          </div>
-          <h3>Hacienda ovejera de Mataveri</h3>
-          <p>Diagnóstico del conjunto patrimonial industrial ovejero de Mataveri. Sede administrativa de la Compañía Explotadora durante el periodo de explotación ganadera.</p>
-          <div class="proyecto-stats">
-            <div class="stat"><span class="stat-num">—</span><span class="stat-label">Inmuebles</span></div>
-            <div class="stat"><span class="stat-num">—</span><span class="stat-label">Archivos</span></div>
-            <div class="stat"><span class="stat-num">—</span><span class="stat-label">Documentos</span></div>
-          </div>
-          <span class="proyecto-link disabled">Próximamente</span>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="relato">
-  <div class="seccion-cont">
-    <div class="seccion-titulo">
-      <div class="seccion-kicker">Relato del siglo XX</div>
-      <h2>Hitos que configuran el patrimonio construido del período</h2>
-      <p>Línea de tiempo de los principales eventos administrativos, productivos y políticos que dan contexto a los inmuebles documentados.</p>
-    </div>
-    <div class="relato-cont">
-      <div class="relato-intro">
-        <p style="font-style:italic;color:var(--texto-suave);font-size:17px;">El siglo XX en Rapa Nui está marcado por tres administraciones sucesivas que dejaron huellas materiales todavía legibles: la Compañía Explotadora, la Armada de Chile y la administración civil municipal.</p>
+    <div class="hero-contenido">
+      <span class="eyebrow">Tepuku · Rapa Nui</span>
+      <h1>Inventario de inmuebles del <em>siglo XX</em> en Rapa Nui</h1>
+      <div class="hero-periodo">Periodo histórico 1900–1965</div>
+      <div class="hero-cta">
+        <a href="/mapa/" class="btn btn-primario">Explorar el mapa</a>
+        <a href="/proyectos/" class="btn">Conocer los proyectos</a>
       </div>
-      <div class="timeline">
-        <div class="hito">
-          <div class="hito-año">1888</div>
-          <h4>Anexión a Chile</h4>
-          <p>Chile incorpora Rapa Nui al territorio nacional mediante el Acuerdo de Voluntades firmado por Policarpo Toro y los jefes rapanui.</p>
+    </div>
+    <div class="hero-credito">
+      <strong>Hanga Roa · 1962</strong>
+      <span class="hero-credito-aviso">Servicio Aerofotogramétrico FACh</span>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="contenido">
+    <div class="stats">
+      <div>
+        <span class="stat-numero">22</span>
+        <span class="stat-label">Puntos georreferenciados</span>
+      </div>
+      <div>
+        <span class="stat-numero">2</span>
+        <span class="stat-label">Proyectos integrados</span>
+      </div>
+      <div>
+        <span class="stat-numero">65</span>
+        <span class="stat-label">Años de cobertura</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa síntesis -->
+  <section class="seccion">
+    <div class="contenido">
+      <span class="eyebrow">Mapa síntesis</span>
+      <h2>Inmuebles distribuidos en la isla</h2>
+      <p class="lead">Inmuebles fiscales, religiosos e industriales del siglo XX, documentados por dos proyectos en distintas zonas de la isla.</p>
+
+      <div class="mapa-sintesis mapa-sintesis--antiguo">
+        <div id="mapa-sintesis-leaflet" class="mapa-sintesis-leaflet"></div>
+      </div>
+
+      <a href="/mapa/" class="btn">Ver mapa completo →</a>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section class="seccion" style="background: var(--crema-claro);">
+    <div class="contenido">
+      <span class="eyebrow">Proyectos del hub</span>
+      <h2>Investigaciones que componen el inventario</h2>
+
+      <div class="proyectos-grid">
+        <div class="proyecto-card" data-proyecto="ifyr">
+          <div class="proyecto-card-imagen">
+            <img src="/img/proyecto-ifyr.jpg" alt="Inmuebles fiscales y religiosos de Hanga Roa">
+          </div>
+          <div class="proyecto-codigo">IFYR · 2024</div>
+          <h3 class="proyecto-titulo">Inmuebles fiscales y religiosos de Hanga Roa</h3>
+          <p class="proyecto-descripcion">Nueve inmuebles documentados durante el periodo de transición de la Compañía Explotadora a la Armada de Chile y al Ministerio de Tierras y Colonización.</p>
+          <div class="proyecto-meta">
+            <div class="proyecto-meta-item">
+              <span class="proyecto-meta-label">Inmuebles</span>
+              <span class="proyecto-meta-valor">9</span>
+            </div>
+            <div class="proyecto-meta-item">
+              <span class="proyecto-meta-label">Periodo</span>
+              <span class="proyecto-meta-valor">1942–1964</span>
+            </div>
+          </div>
+          <a href="/proyectos/#ifyr" class="proyecto-card-cta">Ver detalle del proyecto</a>
         </div>
-        <div class="hito">
-          <div class="hito-año">1895</div>
-          <h4>Compañía Explotadora</h4>
-          <p>Concesión a Enrique Merlet para la explotación ganadera ovina. Inicio del modelo de estancia patagónica adaptado a la isla.</p>
+
+        <div class="proyecto-card" data-proyecto="bc">
+          <div class="proyecto-card-imagen">
+            <img src="/img/proyecto-bc.jpg" alt="Vestigios del borde costero">
+          </div>
+          <div class="proyecto-codigo">BC · 2022</div>
+          <h3 class="proyecto-titulo">Vestigios del periodo histórico en el borde costero</h3>
+          <p class="proyecto-descripcion">Trece zonas costeras con ciento trece inmuebles industriales —bodegas, sistemas hidráulicos, muelles— registrados desde los inicios de la Compañía Explotadora hasta su transformación contemporánea.</p>
+          <div class="proyecto-meta">
+            <div class="proyecto-meta-item">
+              <span class="proyecto-meta-label">Zonas</span>
+              <span class="proyecto-meta-valor">13</span>
+            </div>
+            <div class="proyecto-meta-item">
+              <span class="proyecto-meta-label">Periodo</span>
+              <span class="proyecto-meta-valor">1900–presente</span>
+            </div>
+          </div>
+          <a href="/proyectos/#bc" class="proyecto-card-cta">Ver detalle del proyecto</a>
         </div>
-        <div class="hito">
-          <div class="hito-año">1914</div>
-          <h4>Traslado a Vaitea</h4>
-          <p>Las actividades de esquila se mueven desde Haŋa Piko al interior de la isla, modificando la lógica productiva del borde costero.</p>
-        </div>
-        <div class="hito">
-          <div class="hito-año">1942</div>
-          <h4>Primer plano fiscal</h4>
-          <p>Mapa de la parcelación dentro de las 2.500 ha de la Reserva Rapanui. Marca el inicio del registro estatal sistemático.</p>
-        </div>
-        <div class="hito">
-          <div class="hito-año">1953</div>
-          <h4>Fin de la Compañía Explotadora</h4>
-          <p>Tras denuncias de maltrato a la comunidad isleña, el complejo se traspasa a la administración de la Armada de Chile.</p>
-        </div>
-        <div class="hito">
-          <div class="hito-año">1964</div>
-          <h4>Último inventario de la Armada</h4>
-          <p>Registro de los inmuebles fiscales previo al traspaso a administración civil. Incluye actas de demolición posteriores.</p>
-        </div>
-        <div class="hito">
-          <div class="hito-año">1966</div>
-          <h4>Ley Pascua</h4>
-          <p>Se implementa la Ley 16.441. Las funciones públicas pasan al naciente municipio local. Cierre del ciclo administrativo militar.</p>
+
+        <div class="proyecto-card" data-proyecto="hom">
+          <div class="proyecto-card-imagen">
+            <img src="/img/proyecto-hom.jpg" alt="Hacienda Ovejera de Mataveri">
+          </div>
+          <div class="proyecto-codigo">HOM · 2020 · Próximamente</div>
+          <h3 class="proyecto-titulo">Diagnóstico de la Hacienda Ovejera de Mataveri</h3>
+          <p class="proyecto-descripcion">Diagnóstico técnico del conjunto hacendal de Mataveri, primer asentamiento extranjero operacional asociado a la ganadería ovina industrial.</p>
+          <div class="proyecto-meta">
+            <div class="proyecto-meta-item">
+              <span class="proyecto-meta-label">Sectores</span>
+              <span class="proyecto-meta-valor">3</span>
+            </div>
+            <div class="proyecto-meta-item">
+              <span class="proyecto-meta-label">Periodo</span>
+              <span class="proyecto-meta-valor">1895–1953</span>
+            </div>
+          </div>
+          <a href="/proyectos/#hom" class="proyecto-card-cta">Ver detalle del proyecto</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="equipo">
-  <div class="seccion-cont">
-    <div class="seccion-titulo">
-      <div class="seccion-kicker">Equipo</div>
-      <h2>Quién investiga y publica este inventario</h2>
+  <!-- Equipo preview -->
+  <section class="seccion">
+    <div class="contenido">
+      <span class="eyebrow">Quién publica</span>
+      <h2>Tepuku</h2>
+      <p class="tepuku-tagline">Centro de Investigaciones Aplicadas en Rapa Nui y Otras Islas</p>
+      <p class="lead">Investiga, documenta y difunde el patrimonio arquitectónico e histórico de Rapa Nui a través de inventarios públicos. Cada proyecto integrado en este inventario es desarrollado por un equipo específico, con instituciones colaboradoras y financiamiento público.</p>
+      <a href="/equipo/" class="btn" style="margin-top: 1.5rem;">Conocer al centro →</a>
     </div>
-    <div class="equipo-cont">
-      <h3>Tepuku</h3>
-      <p>Centro de Investigaciones Aplicadas en Rapa Nui y Otras Islas. Documenta patrimonio cultural material y difunde archivo histórico mediante plataformas digitales abiertas.</p>
-      <p>Cada proyecto integrado en este inventario es desarrollado por un equipo específico, con instituciones colaboradoras y fondos públicos chilenos. Los créditos detallados de cada investigación están disponibles en el sitio del proyecto correspondiente.</p>
-      <div class="equipo-detalles">
-        <div class="detalle">
-          <h4>Contacto</h4>
-          <p>contactotepuku@gmail.com</p>
-        </div>
-        <div class="detalle">
-          <h4>Cómo citar</h4>
-          <p>Tepuku (2026). Inventario de inmuebles del siglo XX en Rapa Nui. inmuebles.tepuku.org</p>
-        </div>
-        <div class="detalle">
-          <h4>Licencia</h4>
-          <p>Contenidos publicados bajo Creative Commons CC BY-NC 4.0</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="footer-cont">
-    <div>
-      <h4>Inmuebles del siglo XX</h4>
-      <p>Archivo digital de inmuebles construidos en Rapa Nui durante el siglo XX. Proyecto del Centro de Investigaciones Aplicadas Tepuku.</p>
-    </div>
-    <div>
-      <h4>Proyectos</h4>
-      <ul>
-        <li><a href="https://fiscales-religiosos.tepuku.org" target="_blank" rel="noopener">IFYR 1942-1964</a></li>
-        <li><a href="https://storymaps.arcgis.com/stories/9f980fd024cd4f03a6fa28a7ae027804" target="_blank" rel="noopener">Borde Costero</a></li>
-        <li><a href="https://tepuku.org" target="_blank" rel="noopener">Volver a Tepuku.org</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Acceso abierto</h4>
-      <p>Contenidos publicados bajo licencia CC BY-NC 4.0. Uso libre con atribución, sin fines comerciales.</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Tepuku</span>
-    <span>inmuebles.tepuku.org</span>
-  </div>
-</footer>
+  <script src="/js/common.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/js/mapa.js"></script>
+  <script>
+    renderHeader('inicio');
+    renderFooter();
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-const inmuebles = [
-  {id:'IFYR-007', nombre:'Radio Estación Naval', proyecto:'IFYR', proyecto_label:'Fiscales y religiosos', año:'1942', sector:'Costa norte de Hanga Roa', lat:-27.155946, lng:-109.433138, color:'#8B1A1A', tipo:'Comunicaciones', tenencia:'Fiscal Armada', url:'https://fiscales-religiosos.tepuku.org', descripcion:'Estación de radio de la Armada de Chile, construida en madera con techos de zinc. Parte de la infraestructura de comunicaciones del periodo administrativo militar.'},
-  {id:'IFYR-009', nombre:'Casa del Mecánico de Radio', proyecto:'IFYR', proyecto_label:'Fiscales y religiosos', año:'1946', sector:'Moeroa', lat:-27.152623, lng:-109.432194, color:'#8B1A1A', tipo:'Vivienda', tenencia:'Fiscal Armada', url:'https://fiscales-religiosos.tepuku.org', descripcion:'Vivienda situada en Moeroa de 12,4 m de largo, 6,25 m de ancho y 3,80 m de altura media. Construcción de madera con techo de zinc acanalado.'},
-  {id:'IFYR-010', nombre:'Jefatura Militar', proyecto:'IFYR', proyecto_label:'Fiscales y religiosos', año:'1948', sector:'Hanga Roa centro', lat:-27.149035, lng:-109.430653, color:'#8B1A1A', tipo:'Administrativo', tenencia:'Fiscal Armada', url:'https://fiscales-religiosos.tepuku.org', descripcion:'Sede administrativa de la Jefatura Militar de la Armada en Rapa Nui durante el período 1953-1964.'},
-  {id:'IFYR-018', nombre:'Casa del Practicante', proyecto:'IFYR', proyecto_label:'Fiscales y religiosos', año:'1948', sector:'Hanga Roa centro', lat:-27.148146, lng:-109.427722, color:'#8B1A1A', tipo:'Vivienda', tenencia:'Fiscal Armada', url:'https://fiscales-religiosos.tepuku.org', descripcion:'Vivienda del practicante asignado al Hospital Naval. Anexa al conjunto hospitalario.'},
-  {id:'IFYR-020', nombre:'Hospital Naval', proyecto:'IFYR', proyecto_label:'Fiscales y religiosos', año:'1948', sector:'Hanga Roa centro', lat:-27.147236, lng:-109.427037, color:'#8B1A1A', tipo:'Salud', tenencia:'Fiscal Armada', url:'https://fiscales-religiosos.tepuku.org', descripcion:'Conjunto hospitalario de la Armada construido por CEDIP. Pabellón de mampostería de piedra y concreto, con sala dentística agregada en 1946 y posteriores ampliaciones.'},
-  {id:'IFYR-021', nombre:'Escuela pública N° 72', proyecto:'IFYR', proyecto_label:'Fiscales y religiosos', año:'1948', sector:'Hanga Roa centro', lat:-27.148035, lng:-109.426803, color:'#8B1A1A', tipo:'Educación', tenencia:'Fiscal', url:'https://fiscales-religiosos.tepuku.org', descripcion:'Establecimiento educacional fiscal. Forma parte del conjunto educativo religioso junto con la Casa de las Monjas (IFYR-022).'},
-  {id:'IFYR-022', nombre:'Casa de las Monjas de la Escuela', proyecto:'IFYR', proyecto_label:'Fiscales y religiosos', año:'1948', sector:'Hanga Roa centro', lat:-27.147422, lng:-109.426588, color:'#8B1A1A', tipo:'Religioso', tenencia:'Religioso', url:'https://fiscales-religiosos.tepuku.org', descripcion:'Vivienda de las religiosas asignadas a la Escuela N° 72. Componente del conjunto educativo religioso.'},
-  {id:'IFYR-024', nombre:'Iglesia Católica Santa Cruz', proyecto:'IFYR', proyecto_label:'Fiscales y religiosos', año:'1937', sector:'Hanga Roa centro', lat:-27.149083, lng:-109.424204, color:'#8B1A1A', tipo:'Religioso', tenencia:'Religioso', url:'https://fiscales-religiosos.tepuku.org', descripcion:'Iglesia parroquial principal de Hanga Roa. Conjunto incluye casa parroquial (IFYR-025) que se documenta integrada en esta ficha.'},
-  {id:'IFYR-201', nombre:'Leprosario', proyecto:'IFYR', proyecto_label:'Fiscales y religiosos', año:'1947', sector:'Norte de la isla', lat:-27.122966, lng:-109.415272, color:'#8B1A1A', tipo:'Salud', tenencia:'Fiscal Armada', url:'https://fiscales-religiosos.tepuku.org', descripcion:'Conjunto sanitario aislado al norte de la isla. Documentado con 4 sub-casos diferenciados (201-01 a 201-04) que componen el complejo leprosario.'}
-];
+    // Mapa síntesis: vista general no interactiva. Tile cartográfico con
+    // nombres de lugares y un sepia sutil para sintonizar con la estética
+    // del archivo, sin oscurecer la legibilidad.
+    cargarPuntos().then(data => {
+      const map = L.map('mapa-sintesis-leaflet', {
+        zoomControl: false,
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        dragging: false,
+        touchZoom: false,
+        attributionControl: false
+      }).setView([-27.122, -109.346], 12);
+      window._mapaHome = map;  // expuesto para debug
 
-let inmuebleSeleccionado = null;
-let filtroActivo = 'todos';
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        subdomains: 'abcd',
+        maxZoom: 14
+      }).addTo(map);
 
-const map = L.map('mapa-principal', {scrollWheelZoom:true, zoomControl:true}).setView([-27.145, -109.428], 13);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-  attribution:'© OpenStreetMap, © CartoDB',
-  subdomains:'abcd',
-  maxZoom:19
-}).addTo(map);
+      renderPuntos(map, data.puntos);
 
-const markers = {};
-inmuebles.forEach(inm => {
-  const marker = L.circleMarker([inm.lat, inm.lng], {
-    radius:9,
-    fillColor:inm.color,
-    color:'white',
-    weight:2,
-    opacity:1,
-    fillOpacity:0.9
-  }).addTo(map);
-  marker.bindPopup(`
-    <div class="popup-id">${inm.proyecto} · ${inm.id}</div>
-    <div class="popup-nombre">${inm.nombre}</div>
-    <div class="popup-meta">${inm.año} · ${inm.tipo}</div>
-  `);
-  marker.on('click', () => seleccionarInmueble(inm.id));
-  markers[inm.id] = marker;
-});
-
-function renderLista() {
-  const cont = document.getElementById('lista-inmuebles');
-  const filtrados = filtroActivo === 'todos' ? inmuebles : inmuebles.filter(i => i.proyecto === filtroActivo);
-  document.getElementById('contador').textContent = filtrados.length;
-  cont.innerHTML = filtrados.map(inm => `
-    <div class="item-inmueble ${inmuebleSeleccionado === inm.id ? 'seleccionado' : ''}" onclick="seleccionarInmueble('${inm.id}')">
-      <div class="item-id">${inm.id}</div>
-      <div class="item-nombre">${inm.nombre}</div>
-      <div class="item-meta">${inm.año} · ${inm.tipo}</div>
-    </div>
-  `).join('');
-}
-
-function seleccionarInmueble(id) {
-  const inm = inmuebles.find(i => i.id === id);
-  if (!inm) return;
-  inmuebleSeleccionado = id;
-  document.getElementById('ficha-vacia').style.display = 'none';
-  const cont = document.getElementById('ficha-contenido');
-  cont.classList.add('visible');
-  cont.innerHTML = `
-    <div class="ficha-imagen">Foto de archivo</div>
-    <div class="ficha-cabecera">
-      <div class="ficha-id">${inm.proyecto_label} · ${inm.id}</div>
-      <h3 class="ficha-titulo">${inm.nombre}</h3>
-      <div class="ficha-subtitulo">${inm.sector}</div>
-    </div>
-    <div class="ficha-datos">
-      <div class="dato"><div class="dato-label">Año</div><div class="dato-valor">${inm.año}</div></div>
-      <div class="dato"><div class="dato-label">Tipo</div><div class="dato-valor">${inm.tipo}</div></div>
-      <div class="dato"><div class="dato-label">Tenencia</div><div class="dato-valor">${inm.tenencia}</div></div>
-    </div>
-    <div class="ficha-descripcion">${inm.descripcion}</div>
-    <div class="ficha-acciones">
-      <a href="${inm.url}" target="_blank" rel="noopener" class="btn-ficha">Ver ficha completa</a>
-    </div>
-  `;
-  document.getElementById('ficha').classList.add('abierta');
-  renderLista();
-  map.setView([inm.lat, inm.lng], 16, {animate:true});
-  markers[id].openPopup();
-}
-
-function cerrarFicha() {
-  document.getElementById('ficha').classList.remove('abierta');
-}
-
-document.querySelectorAll('.filtro-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('activo'));
-    btn.classList.add('activo');
-    filtroActivo = btn.dataset.filtro;
-    renderLista();
-  });
-});
-
-const buscador = document.getElementById('buscador');
-const resultados = document.getElementById('resultados');
-buscador.addEventListener('input', e => {
-  const q = e.target.value.toLowerCase().trim();
-  if (!q) { resultados.innerHTML = ''; return; }
-  const matches = inmuebles.filter(i =>
-    i.nombre.toLowerCase().includes(q) ||
-    i.id.toLowerCase().includes(q) ||
-    i.proyecto.toLowerCase().includes(q) ||
-    i.tipo.toLowerCase().includes(q) ||
-    i.año.includes(q)
-  );
-  if (matches.length === 0) {
-    resultados.innerHTML = '<div style="padding:14px;color:var(--texto-suave);font-size:14px">Sin resultados</div>';
-    return;
-  }
-  resultados.innerHTML = matches.slice(0, 6).map(m => `
-    <div class="resultado-item" onclick="seleccionarInmueble('${m.id}');document.getElementById('mapa-sec').scrollIntoView({behavior:'smooth'});resultados.innerHTML='';buscador.value=''">
-      <div>${m.nombre}</div>
-      <div class="resultado-meta">${m.proyecto} · ${m.id} · ${m.año}</div>
-    </div>
-  `).join('');
-});
-
-renderLista();
-</script>
-
+      // Recalcular tamaño después de que el layout CSS (aspect-ratio) esté
+      // aplicado, manteniendo zoom 12.
+      requestAnimationFrame(() => {
+        map.invalidateSize();
+        map.setView([-27.122, -109.346], 12);
+      });
+    });
+  </script>
 </body>
 </html>
